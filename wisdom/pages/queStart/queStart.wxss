@@ -1,0 +1,16 @@
+/* 头部开始答题 */
+page{height: 100%;}
+.container{background: #d5eaff;height: 100%;margin: 0 35rpx;}
+.container::after{height: 35rpx;background: #fff;content: '';width: 100%;position: absolute;bottom: 0;left: 0;}
+.header{position: relative;height: 805rpx;}
+.container .qus,.header .logo,.header .start{position: absolute;}
+.container .qus{width: 750rpx;height: 805rpx;left: 0;}
+.header .logo{top: 0;left: 80rpx;}
+.header .logo image{width: 220rpx;height: 90rpx;}
+.header .start{background: #fe4241;width: 65%;bottom: 90rpx;left: 17.5%;box-shadow: 0 12rpx 10rpx #477aae;margin: 15rpx 0;}
+/* 规则介绍 */
+.rules{background: #d5eaff;padding: 30rpx 35rpx 20rpx;z-index: 0;font-size: 28rpx;position: absolute;bottom: 35rpx;left: 35rpx;right: 35rpx;}
+.rules .title{margin-top: 52px;text-align: center;font-size: 32rpx;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAawAAAAQCAYAAABKt0sWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEYwQUY5N0U1RDY3MTFFODkxMzhDQTczNDZCODYwMDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEYwQUY5N0Y1RDY3MTFFODkxMzhDQTczNDZCODYwMDAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0RjBBRjk3QzVENjcxMUU4OTEzOENBNzM0NkI4NjAwMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0RjBBRjk3RDVENjcxMUU4OTEzOENBNzM0NkI4NjAwMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrHYotAAAAEtSURBVHja7NxNasJQGIVhbe0SOsk2MnfknlqKQbEg1kXZUZfUn1l7gwk4sEXRkns/nhc+gmImB96ca/4mdV2PUDzPad7TbEQB8CMqExGEkHF+8JmUAD9CcltVlRTiyDhL85XmTTQAPxQWcmGVpjnyPSkBfigsZC8jKQF+KCwUIyMpwQ9+KCwUI+OhlJ+kBD/4EYH2LsFvMQzK+J9k7HnptltRQ1ld7Ifj5YDciCBcsR3jXnzgBz8i/MMai6EI+tXj/Mz92pXjg/jAj6v44Xg5IK5hlcVrt8iYnvj79iHJR7GBH/xQWMhZynWaJ3GBH/xQWBhayrs/pGyf8G/EBH7wQ2EhB3a/SLlIsxQP+MEPhYWcpWy61SMAfoTD29rLp78r6mO0Py8PgB8h+RFgAAUfSyX8cnctAAAAAElFTkSuQmCC) no-repeat center center;background-size: auto 16rpx;margin-bottom: 32rpx;}
+.rules .rule{margin: 22rpx 0;}
+.rules .num{display: block;border: 1rpx solid #333;width: 26rpx;height: 26rpx;text-align: center;line-height: 26rpx;float: left;margin-right: 8rpx;}
+.rules .text{display: block;line-height: 30rpx;}

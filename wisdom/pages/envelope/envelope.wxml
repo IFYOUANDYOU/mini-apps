@@ -1,0 +1,51 @@
+<!--pages/envelope/envelope.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="head">
+      <image class="portrait radiusMax" src="/img/default.png" mode="aspectFill"></image>
+      <text class="h2">祈福红包 </text>
+      <text class="h3">祈福人数越多红包越大</text>
+    </view>
+  </view>
+  <!--参与人数-->
+  <view class="people">
+    <view class="tt">参与人数</view>
+    <scroll-view class="scroll-peoples" scroll-y>
+      <block wx:if="{{peoples.length != 0}}">
+        <view wx:for="{{peoples}}" class="item radiusCenter" data-id="{{item.id}}">
+          <image class="portrait radiusMax" src="{{item.portrait}}" mode="aspectFill"></image>
+          <text class="h2">{{item.name}}刚刚{{helpUserId != ''?'参与了祈福':'给你祈福了'}}！ </text>
+          <text class="h3">{{helpUserId != ''?'祝愿TA早日康复':'祝愿您早日康复'}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="item radiusCenter">暂无好友为您祈福</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view wx:if="{{peoples.length != 0}}" class="open">
+    <block wx:if="{{helpUserId != ''}}">
+      <button class="btn radiusMax" bindtap="share" open-type="share">点击帮他祈福</button>
+    </block>
+    <block wx:else>
+      <button class="btn radiusMax" bindtap="poupleBind">拆开红包</button>
+    </block>
+  </view>
+</view>
+<!--完成之后弹窗-->
+<view wx:if="{{poupleStatu}}" class="pouple guidePack">
+  <view class="shadow"></view>
+  <navigator class="close" url="/pages/index/index" open-type="redirect">
+    <image src="/img/close.png" mode="aspectFill"></image>
+  </navigator>
+  <block wx:if="{{helpUserId != ''}}">
+    <navigator class="goQus" url="/pages/queStart/queStart" open-type="redirect">
+      <image src="http://www.ys9958.com/public/upload/lou/goQus.png" mode="aspectFill"></image>
+    </navigator>
+  </block>
+  <block wx:else>
+    <view class="guide">
+      <image src="http://www.ys9958.com/public/upload/lou/guide1.png" mode="aspectFill"></image>
+    </view>
+  </block>
+</view>

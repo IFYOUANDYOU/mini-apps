@@ -1,0 +1,40 @@
+<!--pages/advertising/advertising.wxml导视-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <!--右边楼层-->
+  <view class="floors radiusCenter">
+    <view wx:for="{{floors}}" class="floor {{floorid==item.id?'cur':''}}" data-floor="{{item.id}}" bindtap="floorBind">{{item.id}}F</view>
+  </view>
+  <!--地图-->
+  <view class="mapImg" style="width: {{viewWidth}}px;height: {{viewWidth}}px;">
+    <zoomImgByView 
+          id='mapLayout'
+          img_src="{{imgsrc}}"
+          view_width="{{viewWidth}}"
+          view_height="{{viewHeight}}"
+          page_width="{{reswidth}}" /> 
+  </view>
+  <!--下边菜单-->
+  <view class="bottom">
+    <view class="points">
+      <view class="point start ellipsis" data-point="{{start}}" data-type="0" bindtap="startBind">
+        <text>起点：{{start?start:'请选择'}}</text>
+      </view>
+      <image class="boundary" src="/img/point.png" style=""></image>
+      <view class="point end ellipsis" data-point="{{end}}" data-type="1" bindtap="startBind">
+        <text>终点：{{end?end:'请选择'}}</text>
+      </view>
+    </view>
+    <view class="guide" bindtap="startGuide">开始导航</view>
+  </view>
+</view>
+<view wx:if="{{poupleStatu}}" class="pouple">
+  <view class="shadow" bindtap="poupleBind"></view>
+  <view class="landmarks">
+    <view class="list">
+      <block wx:for="{{landmark}}" wx:for-item="landmarkItem">
+        <template is="landmark" data="{{...landmarkItem}}" />
+      </block>
+    </view>
+  </view>
+</view>

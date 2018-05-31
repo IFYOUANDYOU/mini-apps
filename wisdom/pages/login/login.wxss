@@ -1,0 +1,2 @@
+/**index.wxss**/
+@import "/pages/followup/followup.wxss";

@@ -1,0 +1,5 @@
+/* pages/studio/studio.wxss */
+.graphic,.graphic image{width: 750rpx;height: 280rpx;}
+.section{padding: 0 12rpx;}
+.section .title{border-left: 10rpx solid #c1c1c1;line-height: 30rpx;margin: 29rpx 12rpx;padding-left: 20rpx;font-size: 30rpx;}
+.experts .expert-item{margin: 12rpx 12rpx 24rpx;}

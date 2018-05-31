@@ -1,0 +1,97 @@
+/* 专家团队 */
+.expert-item{margin: 12rpx;overflow: hidden;padding: 24rpx;line-height: 38rpx;position: relative;}
+.expert-portrait,.expert-portrait .portrait{width: 167rpx;height: 200rpx;}
+.item-msg{margin-left: 190rpx;font-size: 24rpx;}
+.item-msg .expert-name{font-size: 30rpx;line-height: 48rpx;}
+.item-msg .expert-name .titles{margin-left: 16rpx;}
+.item-msg .depart{margin: 0 10rpx;}
+.item-msg .expert-desc{color: #666;}
+.item-msg .school,.item-msg .workplace{text-indent: 8rpx;}
+.item-msg .expert-good{color: #999;}
+.expert-item .visit{position: absolute;top: 0;right: 0;width: 94rpx;height: 94rpx;}
+/* 环境图片 */
+.env-item{margin: 12rpx;float: left;}
+.env-item,.env-item image{width: 219rpx;height: 160rpx;}
+/* 案例 */
+.case-item{margin: 12rpx;overflow: hidden;padding: 24rpx;line-height: 40rpx;position: relative;color: #999;font-size: 24rpx;}
+.case-portrait{position: absolute;top: 24rpx;right: 24rpx;}
+.case-portrait,.case-portrait .portrait{width: 280rpx;height: 200rpx;}
+.case-msg{margin-right: 300rpx;font-size: 24rpx;}
+.case-msg .name{font-size: 30rpx;line-height: 50rpx;color: #333;}
+.case-msg .abstract{margin: 10rpx 0 20rpx;min-height: 80rpx;}
+/* 科室 */
+.department-item{margin: 24rpx;line-height: 62rpx;padding: 12rpx;background: rgba(45, 163, 179, 0.85);color: #fff;box-shadow: 6rpx 8rpx 20rpx rgba(0, 0, 0, 0.1);}
+.department-item .h1{font-size: 44rpx;margin: 0 12rpx 16rpx;}
+.department-item .depart{overflow: hidden;display: flex;flex-wrap: wrap;}
+.department-item .name{width: 33.33%;text-align: center;}
+.department-item .text{display: block;background: rgba(255, 255, 255, 0.25);margin: 10rpx;}
+/* 患者评价 */
+.eval-item{line-height: 34rpx;margin: 24rpx 0;}
+.eval-item .user{display: flex;align-items: center;justify-content: space-between;}
+.eval-item .eval-msg{margin-left: 80rpx;}
+.eval-item .name{color: #333;font-size: 30rpx;}
+.eval-item .score{width: 160rpx;height: 23rpx;}
+.eval-item .portrait{width: 68rpx;height: 68rpx;}
+.eval-item .eval-content{margin-top: 24rpx;}
+/* 经典案例 */
+.ccase-item{border-bottom: 1rpx solid #e1e1e1;padding: 24rpx 24rpx 18rpx;line-height: 40rpx;color: #999;}
+.ccase-item:last-child{border: none;}
+.ccase-item .ccase-portrait,.ccase-item .portrait{width: 220rpx;height: 160rpx;}
+.ccase-item .patient-msg{margin-left: 230rpx;min-height: 160rpx;}
+.ccase-item .name{font-size: 30rpx;color: #333;}
+.ccase-item .ccase-msg{margin-top: 16rpx;}
+.ccase-item text{color: #333;}
+/* 设备展示 */
+.equip-item{margin: 24rpx;height: 240rpx;position: relative;border-radius: 10rpx;overflow: hidden;}
+.equip-item .graphic{width: 702rpx;height: 240rpx;}
+.equip-item .title{position: absolute;left: 0;bottom: 0;background: rgba(255, 255, 255, 0.9);width: 100%;padding: 10rpx 0;line-height: 60rpx;text-indent: 24rpx;}
+/*导医路线*/
+.route-item{padding: 16rpx 8rpx;line-height: 58rpx;background: rgba(0, 0, 0, 0.15);margin: 24rpx 0;}
+.route-item .title{font-size: 30rpx;margin: 10rpx 16rpx 24rpx;line-height: 32rpx;}
+.route-item .num{border: 2rpx solid #fff;display: block;width: 26rpx;float: left;margin-right: 10rpx;line-height: 26rpx;height: 26rpx;text-align: center;font-size: 24rpx;}
+.route-item .more{font-size: 28rpx;}
+.route-item .routes{display: flex;flex-wrap: wrap;}
+.route-item .project{margin: 20rpx 0;text-align: center;width: 33.33%;}
+.route-item .text{border: 2rpx solid #fff;margin: 0 20rpx;}
+.route-item .triangle{width: 14rpx;height: 18rpx;margin-left: 10rpx;}
+/*地标*/
+.landmarks{background: #fff;position: absolute;bottom: 0;left: 0;width: 100%;z-index: 12;}
+.landmarks .floor{padding: 12rpx;font-size: 32rpx;}
+.landmarks .list{padding: 12rpx;}
+.landmarks .landmark{display: flex;flex-wrap: wrap;}
+.landmarks .name{font-size: 26rpx;background-color: #e1e1e1;padding: 10rpx 20rpx;margin: 10rpx;} 
+/*随访记录*/
+.record-item{background-color: #fff;margin: 24rpx 0;line-height: 66rpx;padding: 10rpx 0;font-size: 28rpx;border-radius: 12rpx;box-shadow: 0 0 12rpx rgba(0, 0, 0, 0.3);}
+.record-item .view{overflow: hidden;padding: 0 30rpx;}
+.record-item .title{font-size: 30rpx;}
+.record-item .dis{color: #666;}
+.record-item .time,.order-item .ks{color: #999;}
+.record-item .detail{width: 162rpx;height: 48rpx;color: #fff;margin: 10rpx 0 0;line-height: 48rpx;font-size: 28rpx;text-align: center;background: #07b6a5;}
+.record-item .line{line-height: 18rpx;width: 702rpx;height: 18rpx;position: relative;z-index: 1;left: 0;}
+.record-item .line image{width: 704rpx;height: 18rpx;}
+/*健康资讯*/
+.info-item{background: #fff;margin: 0 16rpx;padding: 24rpx 0;border-bottom: 2rpx solid #e1e1e1;overflow: hidden;}
+.info-item:last-child{border: none;}
+.info-item .portrait{width: 200rpx;height: 160rpx;}
+.info-item .info-msg{margin-left: 220rpx;line-height: 40rpx;font-size: 24rpx;}
+.info-item .abstract{height: 120rpx;font-size: 30rpx;}
+.info-item .time{color: #2da3b3;} 
+.info-item .visit{color: #999;} 
+/*优惠券*/
+.coupon-item{background:-webkit-gradient(linear, left top, right bottom, from(#81d5c5), to(#98e3e0));line-height: 46rpx;margin: 24rpx;color: #1f998f;position: relative;overflow: hidden;}
+.coupon-item.used{background: #e1e1e1;color: #c1c1c1;}
+.coupon-item::before,.coupon-item .isuse::after,.coupon-item .message::before,.coupon-item .message::after{content: '';display: block;position: absolute;}
+.coupon-item::before,.coupon-item .isuse::after,.coupon-item .isuse text{border-radius: 150rpx;}
+.coupon-item::before{width: 80rpx;height: 80rpx;background: #f0f0f0;top: 50%;left: 0;margin: -40rpx 0 0 -50rpx;}
+.coupon-item .watermark{position: absolute;width: 268rpx;height: 268rpx;left: 0;top: -20rpx;}
+.coupon-item .isuse{position: absolute;top: 0;right: 0;padding: 34rpx 24rpx;text-align: center;border-left: 2rpx dashed #fff;}
+.coupon-item .isuse::after{border: 2rpx dashed #fff;width: 150rpx;height: 150rpx;top: 31rpx;left: 21rpx;}
+.coupon-item .isuse text{display: block;width: 123rpx;height: 123rpx;line-height: 123rpx;margin: 12rpx;}
+.coupon-item .isuse text{background: rgba(255, 255, 255, 0.8);}
+.coupon-item .message{margin: 38rpx 222rpx 38rpx 50rpx;padding: 20rpx 46rpx;display: flex;position: relative;align-items: center;line-height: 50rpx;background: url(http://www.ys9958.com/public/upload/lou/coupon-bg.png) no-repeat center center;background-size: 100% 100%;justify-content: center;}
+.coupon-item .money{font-size: 90rpx;position: relative;line-height: 100rpx;padding-left: 20rpx;margin-right: 15rpx;}
+.coupon-item .money::before{display: block;content: '￥';font-size: 28rpx;position: absolute;left: 0;bottom: 0;line-height: 50rpx;}
+.coupon-item .types{font-size: 36rpx;}
+.coupon-item .code{font-size: 24rpx;}
+.coupon-item .line{position: absolute;left: 100rpx;right: 272rpx;top: 50rpx;bottom: 50rpx;border-top: 2rpx dashed #1f998f;border-bottom: 2rpx dashed #1f998f;}
+.coupon-item .tip{color: #fff;position: absolute;bottom: 0;right: 200rpx;text-align: center;left: 0;font-size: 20rpx;line-height: 34rpx;}

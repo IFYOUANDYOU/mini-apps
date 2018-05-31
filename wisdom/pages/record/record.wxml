@@ -1,0 +1,14 @@
+<!--pages/record/record.wxml 记录-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container record-main">
+  <block wx:for="{{orders}}" wx:for-item="recordItem">
+    <template is="record" data="{{...recordItem}}" />
+  </block>
+  <block wx:if="{{orders.length == 0}}">
+    <view class="empty-view" style="color: #999;">暂无内容</view>
+  </block>
+</view>
+<!--页面加载出错时显示-->
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

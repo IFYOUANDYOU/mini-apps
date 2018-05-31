@@ -1,0 +1,10 @@
+/* pages/doctor/doctor.wxss */
+.section{padding: 0 24rpx;color: #666;font-size: 24rpx;line-height: 42rpx;}
+.section .title{margin: 20rpx 0;font-size: 36rpx;line-height: 50rpx;color: #333;}
+.section .title .more{font-size: 24rpx;color: #999;}
+.doctor-item{background:-webkit-gradient(linear, left top, right bottom, from(#25a7be), to(#07b6a5));color: #fff;padding: 24rpx;overflow: hidden;border-bottom: 12rpx solid #eef1f2;}
+.doctor-item .doctor-portrait,.doctor-item .portrait{width: 170rpx;height: 200rpx;}
+.doctor-item .doctor-name{font-size: 30rpx;}
+.doctor-item .doctor-score{line-height: 32rpx;}
+.doctor-item .doctor-score .score{width: 224rpx;height: 32rpx;}
+.section .abstract,.section .disease{border-bottom: 1rpx solid #e1e1e1;padding-bottom: 20rpx;}

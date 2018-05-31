@@ -1,0 +1,21 @@
+/* pages/vedio/vedio.wxss */
+page{background: #f0f0f0;}
+.graphic,.graphic image{width: 750rpx;height: 280rpx;}
+.department{padding: 12rpx 0 24rpx;background: #fff;}
+.department .level{text-align: right;line-height: 46rpx;padding: 12rpx 40rpx;}
+.department .score{width: 360rpx;height: 46rpx;}
+.department .name{font-size: 48rpx;}
+.menus{display: flex;align-items: center;justify-content: space-around;margin: 0 24rpx;}
+.menu{line-height: 60rpx;flex-grow: 1;text-align: center;}
+.menu text{display: block;padding: 8rpx 0;background: #f0f0f0;margin: 0 12rpx;}
+.menu.cur text{background: #2da3b3;color: #fff;}
+.matter{overflow: hidden;}
+.matter .section{margin: 24rpx 0;line-height: 40rpx;background: #fff;padding: 24rpx;}
+.matter .introduce,.matter .range{color: #666;font-size: 24rpx;}
+.matter .process,.matter .process image{width: 702rpx;height: 180rpx;margin-top: 12rpx;}
+.case{color: #666;line-height: 42rpx;padding: 24rpx;background: #fff;margin: 24rpx;}
+.case .text{text-indent: 24rpx;}
+.case .img{margin: 24rpx 0;}
+.case .img image{width: 654rpx;height: 355rpx;}
+.container.flex{padding-top: 90rpx;}
+.container.flex .menus{position: fixed;top: 0;left: 0;width: 100%;background-color: #fff;border: none;z-index: 9;padding: 12rpx 0;margin: 0;}

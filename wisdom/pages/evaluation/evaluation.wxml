@@ -1,0 +1,29 @@
+<!--pages/evaluation/evaluation.wxml-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <view class="tt">
+    {{curTt?curTt:'门诊随访'}}
+    <text>{{curDesc?curDesc:'您愿意给多少分？'}}</text>
+  </view>
+  <view class="eval">
+    <view class="item scores">
+      <block wx:for="{{scores}}">
+        <image class="score-image" style="left: {{item*95}}rpx" src="{{scoreIndex > item ? selectedStar : normalStar}}">
+          <view class="perch" style="left: 0" data-key="{{item+1}}" bindtap="evalStar"></view>
+        </image>
+      </block>
+    </view>
+    <view class="item langs">
+      <scroll-view class="scroll-langs" scroll-y>
+        <view wx:for="{{curEval}}" data-id="{{item.id}}" data-lang="{{item.value}}" data-sel="{{item.select}}" class="lang-item radiusMax {{item.select?'cur':''}}" bindtap="selEval">{{item.value}}</view>
+      </scroll-view>
+    </view>
+    <view class="item">
+      <view class="btn radiusCenter" bindtap="gonext">{{curId == evals.length?'完成评价':'下一步'}}</view>
+    </view>
+  </view>
+
+  <view class="tag">
+    <image src="/img/etag.png" mode="aspectFill"></image>
+  </view>
+</view>

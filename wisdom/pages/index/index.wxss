@@ -1,0 +1,34 @@
+/**index.wxss**/
+/**未授权提示**/
+.userCenter{text-align: center;}
+.bg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: -1;}
+.logo{width: 180rpx;height: 180rpx;margin: 128rpx 0 88rpx;}
+.name{width: 575rpx;height: 172rpx;}
+.btns{position: fixed;bottom: 48rpx;left: 0;width: 100%;}
+.btns .btn{margin: 30rpx 70rpx;background: #fff;color: #07b6a5;font-size: 34rpx;line-height: 88rpx;}
+
+.header{position: relative;}
+/**医院图片以及大体介绍**/
+.graphic{padding: 0 40rpx;}
+.graphic image{width: 670rpx;height: 400rpx;}
+.overview{width: 100%;font-size: 24rpx;justify-content: space-between;}
+.overview .h1{padding: 21rpx 0 21rpx 40rpx;font-size: 42rpx;font-weight: bold;}
+.overview .h2{font-size: 24rpx;text-transform: uppercase;margin-top: 6rpx;color: #666;font-weight: normal;}
+.overview .person{line-height: 48rpx;width: 172rpx;margin: 0 40rpx 0 0;text-align: center;color: #999;}
+.overview .accepts{border-bottom: 3rpx solid #c1c1c1;padding-bottom: 3rpx;}
+/**医院功能菜单**/
+.content{margin-top: 10rpx;box-shadow: 0 8rpx 12rpx rgba(20, 75, 102, 0.1) inset;padding-top: 12rpx;}
+.exhibition{overflow: hidden;background: #fff;padding: 44rpx 0;justify-content: space-around;}
+.exhibition .menu{font-size: 28rpx;text-align: center;margin-bottom: 6rpx;}
+.exhibition .h1{font-weight: bold;}
+.exhibition .h2{color: #999;}
+.exhibition .menuicon{width: 112rpx;height: 83rpx;}
+/*guide一键导航*/
+.guide{padding: 0 40rpx;height: 220rpx;}
+.guide image{width: 670rpx;height: 220rpx;}
+/*健康资讯*/
+.infos{margin: 0 24rpx;}
+.infos .title{margin: 24rpx 16rpx 0;font-size: 34rpx;font-weight: bold;}
+/*我的卡包*/
+.cardbag{position: fixed;bottom: 88rpx;right: 30rpx;}
+.cardbag image{width: 128rpx;height: 128rpx;}

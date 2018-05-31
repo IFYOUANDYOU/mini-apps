@@ -1,0 +1,21 @@
+/* pages/survey/survey.wxss */
+page,.btm-btn{background-color: #f5f7fa;}
+.bg{position: fixed;top: 0;left: 0;width: 100%;height: 600rpx;background:-webkit-gradient(linear, 0 top, 0 bottom, from(#0eb8a8), to(#daeff1));z-index: -1;}
+.survey-main{font-size: 30rpx;margin-top: 24rpx;}
+.info{box-shadow: 0 6rpx 12rpx rgba(0, 0, 0, 0.2);margin: 0 24rpx;background-color: #fff;}
+.item{border-bottom: 2rpx solid #e1e1e1;padding: 18rpx 0;line-height: 60rpx;overflow: hidden;}
+.item:last-child{border: none;}
+.tag{padding: 16rpx 24rpx;line-height: 48rpx;font-size: 28rpx;}
+.items{padding: 0 24rpx 12rpx;overflow: hidden;}
+.items .item{color: #999;padding: 0;}
+.items .title{color: #333;padding: 18rpx 0;}
+.items .radio{display: block;padding: 18rpx 0;border-top: 2rpx dotted #e1e1e1;position: relative;}
+.items .check{position: absolute;right: 0;top: 32rpx;width: 32rpx;height: 32rpx;}
+.items radio{display: none;}
+.items .text{background-color: #f5f7fa;border-radius: 10rpx;padding: 12rpx;overflow: hidden;margin-bottom: 24rpx;}
+.items textarea{width: 100%;line-height: 48rpx;}
+.items .stars{width: 370rpx;height: 44rpx;margin: 8rpx 0 24rpx;position: relative;}
+.items .stars image{width: 48rpx;height: 44rpx;margin: 0 11rpx;position: absolute;top: 0;}
+.items .stars .item{position: absolute;top: 0;width: 48rpx;height: 44rpx;}
+.notice{font-size: 28rpx;line-height: 48rpx;padding: 20rpx 24rpx;}
+.notice image{padding: 14rpx 10rpx 0 0;}

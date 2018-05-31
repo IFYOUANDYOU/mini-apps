@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <view class="header">
+    <!--医院图片-->
+    <navigator url="{{navigator}}" class="graphic">
+      <image class="radiusMin" src="{{hospital.intro_img}}" mode="aspectFill"></image>
+    </navigator>
+    <!--医院信息介绍-->
+    <view class="overview flex-center">
+      <view class="h1">
+        {{hospital.hospital_name}}
+        <view class="h2">{{hospital.hospital_E}}</view>
+      </view>
+      <view class="person">
+        <view class="accepts">接诊 {{hospital.receive}}人</view>
+        <view class="inner">住院 {{hospital.Hospitalization}}人</view>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <!--医院功能菜单-->
+    <view class="exhibition flex-center">
+      <navigator class="menu department" url="/pages/department/department">
+        <image class="menuicon" mode="aspectFill" src="/img/menu1.png"></image>
+        <view class="h1">全部科室</view>
+        <view class="h2">信息透视</view>
+      </navigator>
+      <navigator class="menu follow-up" url="/pages/followup/followup">
+        <image class="menuicon" mode="aspectFill" src="/img/menu2.png"></image>
+        <view class="h1">诊后随访</view>
+        <view class="h2">康复跟踪</view>
+      </navigator>
+      <navigator class="menu introduce" url="{{navigator}}">
+        <image class="menuicon" mode="aspectFill" src="/img/menu3.png"></image>
+        <view class="h1">医院介绍</view>
+        <view class="h2">了解情况</view>
+      </navigator>
+      <view class="menu scan" bindtap="scanCode">
+        <image class="menuicon" mode="aspectFill" src="/img/menu4.png"></image>
+        <view class="h1">扫一扫</view>
+        <view class="h2">扫码导医</view>
+      </view>
+    </view>
+    <!--一键导航-->
+    <navigator class="guide" url="/pages/advertising/advertising">
+      <image src="/img/guide.png" mode="aspectFill"></image>
+    </navigator>
+    <!--健康资讯-->
+    <view wx:if="{{hospital.inf.length != 0}}" class="infos">
+      <view class="title">活动资讯</view>
+      <view class="list">
+        <block wx:for="{{hospital.inf}}" wx:for-item="infoItem">
+          <template is="information" data="{{...infoItem}}" />
+        </block>
+      </view>
+    </view>
+    <!--卡包-->
+    <navigator class="cardbag" url="/pages/cardbag/cardbag">
+      <image src="/img/cardbag.png" mode="aspectFill"></image>
+    </navigator>
+  </view>
+</view>

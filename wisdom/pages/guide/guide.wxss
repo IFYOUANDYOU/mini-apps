@@ -1,0 +1,2 @@
+/* pages/guide/guide.wxss */
+@import "/pages/advertising/advertising.wxss";

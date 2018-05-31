@@ -1,0 +1,61 @@
+/**app.wxss**/
+@import "/pages/template/list.wxss";
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 28rpx;
+} 
+::-webkit-scrollbar{display:none;width: 0;height: 0;color: transparent;}
+.graphic image,.portrait{background-color: #f0f0f0;}
+.flex-center{display: flex;align-items: center;justify-content: center;}
+.pull_right{float: right;}
+.pull_left{float: left;}
+.ellipsis{display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.ellipsis2{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.ellipsis3{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;}
+.navigator-hover{background-color: transparent;}
+button{background: none;padding: 0;line-height: auto;font-size: 0;}
+button[type="default"]{background: none;}
+button::after{border: none;}
+button[disabled]{box-shadow: none;}
+.ui-radio radio,.ui-radio checkbox{display: none;}
+.btn{background-color: #2da3b3;color: #fff;font-size: 32rpx;margin: 0;border-radius: 0;border: none;height: 88rpx;line-height: 88rpx;padding: 0;text-align: center;}
+.paddingRL{padding: 0 24rpx;}
+.paddingTB{padding: 24rpx 0;}
+.marginRL{margin: 0 24rpx;}
+.marginTB{margin: 24rpx 0;}
+.radiusMax{border-radius: 100rpx;}
+.radiusCenter{border-radius: 30rpx;}
+.radiusMin{border-radius: 10rpx;}
+.shadow{box-shadow: 0 0 12rpx rgba(0, 0, 0, 0.3);}
+.imgTop{position: relative;top: 2rpx;}
+.arrow{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAYAAAB1NA+iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU4QzFBRjMzQUQ4MTFFOEE0MjFGNEY0NzVGMzM3NDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU4QzFBRjQzQUQ4MTFFOEE0MjFGNEY0NzVGMzM3NDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRThDMUFGMTNBRDgxMUU4QTQyMUY0RjQ3NUYzMzc0NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRThDMUFGMjNBRDgxMUU4QTQyMUY0RjQ3NUYzMzc0NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoVCOHoAAADzSURBVHjapJUxCsIwFIbbp6DiNZwEz1AHQUdFXBRv4AUcLKiDJ9FVJ6mDVBw9hOAtHP0DFkJIX17SBx/pC/wfbZO0ceN6jFBLMAcvcADfSFgxBH2MuTaXgYlUQuABUm1uBM6gKRWo2odKSLsOkpDR2yQXTkKWOVMy5CRUIhZLiHk8kYQcL9kpIcFSsxIS7thSSa2+mEq3/RP0QPffd0BbegdF5UY/8BUkRn/3EWzATOtvYE0e4Z0RHqsjT1XCkmVkwy6BM8wJUkm4TKDCW0nYJjDDGRc2Bbaw8+tMVcKFIAkNq1Kn8YPxDVrgBFY+f6afAAMA4AZFewlj0YgAAAAASUVORK5CYII=) no-repeat right center;background-size: 16rpx 27rpx;}
+/*列表为空*/
+.empty-list,.error-item{text-align: center;color: #999;background-color: #f0f0f0;position: fixed;left: 0;top: 0;width: 100%;height: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;font-size: 28rpx;}
+.empty-list image{width: 148rpx;height: 113rpx;margin-bottom: 16rpx;}
+/*出错*/
+.error-item image{width: 284rpx;height: 166rpx;margin-bottom: 16rpx;}
+/*列表为空*/
+.empty{padding: 24rpx;}
+/*fixed底部*/
+.btm-btn{padding: 16rpx 24rpx 24rpx;background-color: #fff;}
+.flex-bottom{position: fixed;bottom: 0;left: 0;width: 100%;}
+.flex-pd{padding: 24rpx;background-color: #fff;}
+/*弹出层*/
+.pouple{position: fixed;}
+.pouple .shadow,.pouple{left: 0;top: 0;width: 100%;height: 100%;z-index: 11;}
+.pouple .shadow{position: absolute;background: rgba(0, 0, 0,0.6);}
+/*红包关注公众号引导*/
+.guidePack .guide,.guidePack .close,.guidePack .goQus{position: absolute;left: 0;right: 0;text-align: center;z-index: 19;}
+.guidePack .guide{top: 0;}
+.guidePack .guide image{width: 560rpx;height: 957rpx;}
+.guidePack .close{bottom: 108rpx;}
+.guidePack .close image{width: 78rpx;height: 78rpx;}
+.guidePack .goQus{top: 50%;margin-top: -350rpx;}
+.guidePack .goQus image{width: 581rpx;height: 698rpx;}
+
+picker,picker-view,.pickerView{font-size: 30rpx;}

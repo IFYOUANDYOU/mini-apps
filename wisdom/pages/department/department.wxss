@@ -1,0 +1,2 @@
+/* pages/department/department.wxss */
+page{background: url(http://www.ys9958.com/public/upload/lou/departbackground.jpg) no-repeat top right fixed;background-size: 100% auto;}

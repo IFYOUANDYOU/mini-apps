@@ -1,0 +1,12 @@
+/* pages/hospital/hospital.wxss */
+.graphic,.graphic image{width: 750rpx;height: 320rpx;}
+.section{padding: 0 12rpx;}
+.section .title{border-left: 10rpx solid #c1c1c1;line-height: 30rpx;margin: 29rpx 12rpx;padding-left: 20rpx;font-size: 30rpx;}
+.section .title .more{color: #999;font-size: 24rpx;}
+.section .abstract{background-color: #32b39d;color: #fff;font-size: 24rpx;line-height: 40rpx;padding: 12rpx 24rpx;margin: 0 12rpx;text-indent: 48rpx;}
+.experts{margin-bottom: 20rpx;}
+.experts swiper{height: 270rpx;margin: -12rpx 0;}
+.experts .expert-item{box-shadow: 0 0 12rpx rgba(0, 0, 0, 0.3);border-radius: 10rpx;}
+.pics{overflow: hidden;}
+.pics .title{margin: 12rpx;}
+.environments{overflow: hidden;}

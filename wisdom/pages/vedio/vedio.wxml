@@ -1,0 +1,70 @@
+<!--pages/vedio/vedio.wxml影像科-->
+<!--引入公用文件-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container {{flexmenu?'flex':''}}">
+  <!--科室图片-->
+  <view class="graphic" id="graphic">
+    <image src="{{department.department_info.intro_img}}" mode="aspectFill"></image>
+  </view>
+  <!--科室评分、接诊量、菜单-->
+  <view class="department">
+    <view class="level one">
+      <text class="name pull_left">{{department.department_info.name}}</text>
+      <text class="amount">接诊量：{{department.department_info.reception}}/次</text>
+    </view>
+    <view class="level two">
+      <text class="pull_left">综合评分</text>
+      <image class="score" src="/img/star{{department.department_info.score}}.png" mode="aspectFill"></image>
+    </view>
+    <view class="menus">
+      <view class="menu {{menuindex==1?'cur':''}}" data-typeindex="1" bindtap="menuBind">
+        <text>科室介绍</text>
+      </view>
+      <view class="menu {{menuindex==2?'cur':''}}" data-typeindex="2" bindtap="menuBind">
+        <text>设备展示</text>
+      </view>
+      <view class="menu {{menuindex==3?'cur':''}}" data-typeindex="3" bindtap="menuBind">
+        <text>诊疗优势</text>
+      </view>
+    </view>
+  </view>
+  <view class="matter">
+    <!--科室介绍-->
+    <view wx:if="{{menuindex == '1'}}" class="sections intro">
+      <!--科室介绍-->
+      <view wx:if="{{department.department_info.part_intro}}" class="section">
+        <view class="h2">【科室介绍】</view>
+        <view class="introduce">{{department.department_info.part_intro?department.department_info.part_intro:'暂无内容'}}</view>
+      </view>
+      <!--检查流程-->
+      <view wx:if="{{department.department_info.process_img}}" class="section">
+        <view class="h2">【检查流程】</view>
+        <view class="process"><image src="{{department.department_info.process_img}}"></image></view>
+      </view>
+      <!--诊疗范围-->
+      <view wx:if="{{department.department_info.part_title}}" class="section">
+        <view class="h2">【诊疗范围】</view>
+        <view class="range">{{department.department_info.part_title?department.department_info.part_title:'暂无内容'}}</view>
+      </view>
+    </view>
+    <!--设备展示-->
+    <view wx:if="{{menuindex == '2'}}" class="sections equipments">
+      <view wx:if="{{department.equipment}}" class="list">
+        <block wx:for="{{department.equipment}}" wx:for-item="equipmentItem">
+          <template is="equipment" data="{{...equipmentItem}}" />
+        </block>
+      </view>
+    </view>
+    <!--诊疗优势-->
+    <view wx:if="{{menuindex == '3'}}" class="sections case">
+      <view wx:if="{{department.treatment}}">
+        <view class="text">{{department.treatment.treatment_name}}</view>
+        <view class="img"><image src="{{department.treatment.treatment_img}}"></image></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--页面加载出错时显示-->
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

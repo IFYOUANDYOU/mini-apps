@@ -1,0 +1,16 @@
+/* pages/nurse/nurse.wxss */
+.graphic,.graphic image{width: 750rpx;height: 280rpx;}
+.nurses{background:-webkit-gradient(linear, left top, right bottom, from(#26a6bf), to(#07b6a5));color: #fff;overflow: hidden;line-height: 50rpx;}
+.nurses .list{padding: 12rpx;display: flex;flex-wrap: wrap;justify-content: space-between;}
+.nurses .graphic-item{text-align: center;padding: 12rpx;font-size: 24rpx;position: relative;line-height: 40rpx;}
+.nurses .graphic-item .graphic{width: 107rpx;height: 107rpx;border: 6rpx solid #fff;border-radius: 120rpx;background-color: #fff;}
+.nurses .graphic-item .leader{display: block;position: absolute;top: 108rpx;left: 50%;width: 80rpx;height: 30rpx;margin-left: -40rpx;line-height: 30rpx;background-color: #32b39d;font-size: 20rpx;}
+.nurses .more{padding: 20rpx;text-align: center;line-height: 38rpx;border-top: 2rpx solid rgba(255, 255, 255, 0.3);}
+.nurses .more .down{width: 22rpx;height: 13rpx;top: -4rpx;}
+
+.section{padding: 12rpx;}
+.section .title{padding: 12rpx;line-height: 48rpx;font-size: 36rpx;}
+.section .more{color: #999;font-size: 24rpx;}
+.tips .list{display: flex;flex-wrap: wrap;}
+.tips .graphic-item{padding: 12rpx;width: 156rpx;text-align: center;color: #666;}
+.tips .graphic{width: 156rpx;height: 156rpx;border-radius: 10rpx;overflow: hidden;}

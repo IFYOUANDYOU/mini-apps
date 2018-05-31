@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view wx:if="{{statu}}" class="container index-main">
+  <image class="bg" src="../../img/loginbg.jpg" mode="aspectFill"></image>
+  <!--顶部图片-->
+  <view class="head">
+    <image src="../../img/healthcare.png" mode="aspectFill"></image>
+  </view>
+  <view class='index-form'>
+    <form>
+      <!--手机号-->
+      <view class="item radiusMin">
+        <view class="item_title pull-left">
+          <image src="../../img/smartphone.png" mode="aspectFill" style="width: 34rpx;height: 46rpx;margin-top: 8rpx;"></image>
+        </view>
+        <view class='item_input'>
+          <input bindinput="bindTelInput" placeholder="请输入您的手机号" value="{{telNumber}}" />
+        </view>
+      </view>
+      <!--验证码-->
+      <view class="item radiusMin">
+        <view class="item_title pull-left">
+          <image src="../../img/email.png" mode="aspectFill" style="width: 39rpx;height: 28rpx;margin-top: 18rpx;"></image>
+        </view>
+        <view class="item_input">
+          <input bindinput="bindCodeInput" placeholder="请输入验证码" value="{{code}}" />
+        </view>
+        <!--获取验证码-->
+        <button class="getCode" disabled="{{codeDis}}" bindtap="getCode">
+          {{time}}
+        </button>
+      </view>
+    </form>
+  </view>
+  <!--下一步-->
+  <view class="index-bottom">
+    <view class="flex-bottom">
+      <view class="btm-text">
+        绑定即代表同意
+        <text>《XXX用户随访服务协议》</text>
+      </view>
+      <view class="btm-btn">
+        <button class="btns next radiusMax" bindtap="goNext">下一步</button>
+      </view>
+    </view>
+  </view>
+</view>

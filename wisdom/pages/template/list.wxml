@@ -1,0 +1,214 @@
+<!--专家团队-->
+<template name="expert">
+  <view class="expert-item" data-id="{{doctor_id?doctor_id:id}}" bindtap="expertBind">
+    <view class="expert-portrait pull_left">
+      <image class="portrait" src="{{doctor_img?doctor_img:'/img/default.png'}}" mode="aspectFill"></image>
+    </view>
+    <view class="item-msg">
+      <view class="expert-name">
+        <text wx:if="{{doctor_name}}" class="name">· {{doctor_name}}</text>
+        <text wx:if="{{department}}" class="depart">{{department}}</text>
+        <text wx:if="{{occupation_id}}" class="titles">{{occupation_id}}</text>
+      </view>
+      <view class="expert-desc">
+        <view wx:if="{{honorary_title}}" class="school ellipsis">· {{honorary_title}}</view>
+        <view wx:if="{{honor_two}}" class="workplace ellipsis">· {{honor_two}} </view>
+      </view>
+      <view class="expert-good">
+        <text wx:if="{{good_at}}" class="goodat ellipsis2">{{good_at}}</text>
+      </view>
+    </view>
+    <image class="visit" wx:if="{{today_state == ''}}" src="/img/visit.png"></image>
+  </view>
+</template>
+<!--环境-->
+<template name="environment">
+  <view class="env-item" data-id="{{ad_id}}">
+    <image src="{{Adver_img}}" mode="aspectFill" data-src="{{Adver_img}}" bindtap="previewImage" data-type="{{type}}"></image>
+  </view>
+</template>
+<!--案例-->
+<template name="case">
+  <view class="case-item" data-id="{{case_id}}" bindtap="caseBind">
+    <view class="case-portrait">
+      <image class="portrait" src="{{case_img}}" mode="aspectFill"></image>
+    </view>
+    <view class="case-msg">
+      <view class="name ellipsis">{{case_title}}</view>
+      <view class="abstract ellipsis2">{{case_brief}}</view>
+      <view class="datetime">{{case_time}}</view>
+    </view>
+    <image wx:if="{{visit}}" class="visit" src="{{visit}}"></image>
+  </view>
+</template>
+<!--科室-->
+<template name="department">
+  <view class="department-item" data-departmentid="{{name}}" wx:for-item="department">
+    <view class="h1">
+      <text>{{value}} </text>
+    </view>
+    <view class="depart">
+      <view wx:for="{{list_name}}" wx:for-item="depart" data-departid="{{depart.id}}" data-special="{{depart.special}}" data-storey="{{depart.storey}}" bindtap="departBind" wx:if="{{depart.special != 1}}" class="name ellipsis">
+        <text class="text">{{depart.name}}</text>
+      </view>
+
+    </view>
+  </view>
+</template>
+<!--评价-->
+<template name="evaluation">
+  <view class="eval-item" data-id="{{com_id}}">
+    <view class="user">
+      <view class="eval-info">
+        <image class="portrait radiusMax pull_left" src="{{user_img?user_img:'/img/default.png'}}" mode="aspectFill"></image>
+        <view class="eval-msg">
+          <view class="name">{{user_name}}</view>
+          <view class="datetime">{{com_time}}</view>
+        </view>
+      </view>
+      <view wx:if="{{com_score}}" class="eval-score">
+        <image class="score" src="/img/star{{com_score}}.png"></image>
+      </view>
+    </view>
+    <view wx:if="{{com_content}}" class="eval-content">{{com_content}}</view>
+  </view>
+</template>
+<!--图文-->
+<template name="graphic">
+  <view class="graphic-item" data-id="{{id?id:''}}" bindtap="graphicBind">
+    <image class="graphic" src="{{img}}" mode="aspectFill" data-src="{{img}}" bindtap="previewImage"></image>
+    <text wx:if="{{leader}}" class="leader radiusCenter">{{leader}}</text>
+    <view wx:if="{{name}}" class="graphic-text ellipsis">{{name}}</view>
+  </view>
+</template>
+<!--医生-->
+<template name="doctor">
+  <view class="doctor-item" data-id="{{id?id:doctor_id}}" bindtap="doctorBind">
+    <image class="graphic radiusMax" src="{{doctor_img}}" mode="aspectFill"></image>
+    <view wx:if="{{doctor_name}}" class="text ellipsis">{{doctor_name}}</view>
+    <view wx:if="{{occupation_id}}" class="physician ellipsis">{{occupation_id}}</view>
+  </view>
+</template>
+<!--设备-->
+<template name="equipment">
+  <view class="equip-item" data-id="{{id?id:''}}" bindtap="graphicBind">
+    <image class="graphic" src="{{equipment_img}}" mode="aspectFill" data-src="{{equipment_img}}" bindtap="previewImage"></image>
+    <view wx:if="{{equipment_name}}" class="title ellipsis">{{equipment_name}}</view>
+  </view>
+</template>
+<!--文章-->
+<template name="article">
+  <view class="article-item" data-id="{{id?id:''}}">
+    <view class="view">
+      <view wx:if="{{gyn_title}}" class="article-title ellipsis">{{gyn_title}}</view>
+      <view wx:if="{{gyn_intro}}" class="article-text">
+        <text>{{gyn_intro}}</text>
+      </view>
+    </view>
+  </view>
+</template>
+<!--经典案例-->
+<template name="classicCase">
+  <view class="ccase-item" data-id="{{id?id:article_id}}">
+    <view class="ccase-portrait pull_left">
+      <image class="portrait" src="{{min_img}}" mode="aspectFill"></image>
+    </view>
+    <view class="patient-msg">
+      <view class="name">患者资料：{{min_name}} {{min_age}}</view>
+      <view class="symptoms">
+        <text>症状：</text>{{min_symptom}}</view>
+    </view>
+    <view class="ccase-msg">
+      <view class="reason">
+        <text>病症原因：</text>{{min_reason}}</view>
+      <view class="pattern">
+        <text>治疗方式：</text>{{min_mode}}</view>
+      <view class="results">
+        <text>治疗结果：</text>{{min_result}}</view>
+    </view>
+  </view>
+</template>
+<!--导医路线-->
+<template name="route">
+  <view class="route-item radiusMin" data-type="{{type}}" data-start="{{star}}" data-end="{{end}}" data-id="{{id?id:''}}" bindtap="routeBind">
+    <view class="title">
+      <text class="num radiusCenter">{{type}}</text>号推荐路线
+      <text class="more pull_right">点击查看></text>
+    </view>
+    <view class="routes">
+      <view class="project" wx:for="{{items}}" wx:for-item="project" data-code="{{project.route_number}}">
+        <view class="text radiusMin">{{project.name}}
+          <image class="triangle" src="/img/triangle.png" mode="aspectFill"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<!--地标-->
+<template name="landmark">
+  <view class="landmark-item">
+    <view class="floor">{{storey}}楼</view>
+    <view class="landmark">
+      <text data-id="{{item.id?item.id:''}}" wx:for="{{items}}" class="name" bindtap="landmarkBind" data-code="{{item.number}}" data-name="{{item.name}}">{{item.name}}</text>
+    </view>
+  </view>
+</template>
+<!--随访记录-->
+<template name="record">
+  <view class='record-item' data-order_sn='{{id}}' data-order_id='{{id}}' bindtap='detail'>
+    <view class='views'>
+      <view class='view'>
+        <text class='title pull_left'>{{name}}</text>
+        <text class='ks pull_right'>科室：{{enum}}</text>
+      </view>
+      <view class='view'>
+        <text class='dis pull_left'>诊断：{{disease}}</text>
+      </view>
+    </view>
+    <view class='line'>
+      <image src='../../img/line.png' mode='aspectFill'></image>
+    </view>
+    <view class='view'>
+      <text class='time pull_left'>随访时间：{{created_time}}</text>
+      <view class='detail pull_right'>查看详情</view>
+    </view>
+  </view>
+</template>
+<!--首页健康资讯-->
+<template name="information">
+  <view class="info-item" data-type="activity" data-id="{{info_id}}" bindtap="infoBind" data-theme="{{theme?theme:''}}">
+    <image class="portrait pull_left" src="{{info_img}}" mode="aspectFill"></image>
+    <view class="info-msg">
+      <view class="abstract ellipsis2">{{info_title}}</view>
+      <text class="time pull_left">{{release_time}}</text>
+      <text class="visit pull_right">阅读：{{info_clicks}}</text>
+    </view>
+  </view>
+</template>
+<!--优惠券-->
+<template name="coupon">
+  <view class="coupon-item {{state==1?'used':''}}">
+    <image class="watermark" src="/img/watermark.png" mode="aspectFill"></image>
+    <view class="isuse">
+      <text>{{state==1?'已使用':'未使用'}}</text>
+    </view>
+    <view class="line"></view>
+    <view class="tip">不可抵用挂号费；不可叠加使用</view>
+    <view class="message">
+      <view class="money">
+        {{money}}
+      </view>
+      <view class="type">
+          <view class="types">{{type}}</view>
+          <view class="code">抵用码：{{code}}</view>
+        </view>
+    </view>
+  </view>
+</template>
+<!--出错-->
+<template name="error">
+  <view class="error-item">
+    <image class="error_img" src="/img/error.png" mode="aspectFill"></image>
+    <view class="error_text">{{text}}</view>
+  </view>
+</template>

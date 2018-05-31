@@ -1,0 +1,51 @@
+{
+  "pages":[
+
+    "pages/index/index",
+    "pages/nurse/nurse",
+    "pages/depart/depart",
+    "pages/bone/bone",
+    "pages/vedio/vedio",
+    "pages/hospital/hospital",
+    "pages/department/department",
+    "pages/studio/studio",
+    "pages/tip/tip",
+    "pages/doctor/doctor",
+    "pages/gynaecology/gynaecology",
+    "pages/caseDetail/caseDetail",
+    
+    "pages/advertising/advertising",
+    "pages/guide/guide",
+
+    "pages/scan/scan",
+
+    "pages/cardbag/cardbag",
+    
+    "pages/reRoute/reRoute",
+    "pages/daoYi/daoYi",
+
+    "pages/transit/transit",
+
+    "pages/queStart/queStart",
+    "pages/question/question",
+
+    "pages/outpatient/outpatient",
+    "pages/evaluation/evaluation",
+    "pages/share/share",
+    "pages/envelope/envelope",
+    "pages/getcard/getcard",
+    
+    "pages/followup/followup",
+    "pages/login/login",
+    "pages/survey/survey",
+    "pages/message/message",
+    "pages/record/record"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧创泰医疗",
+    "navigationBarTextStyle":"black"
+  }
+}

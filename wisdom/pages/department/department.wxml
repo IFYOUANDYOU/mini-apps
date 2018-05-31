@@ -1,0 +1,14 @@
+<!--pages/department/department.wxml全部科室-->
+<!--引入公用文件-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <block wx:if="{{department.length != 0}}">
+    <block wx:for="{{department}}" wx:for-item="departItem">
+      <template is="department" data="{{...departItem}}" />
+    </block>
+  </block>
+  <block wx:else>暂无数据</block>
+</view>
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

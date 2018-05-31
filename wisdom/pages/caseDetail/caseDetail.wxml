@@ -1,0 +1,4 @@
+<!--pages/caseDetail/caseDetail.wxml-->
+<view class="container">
+  <web-view src="{{caseurl}}"></web-view>
+</view>

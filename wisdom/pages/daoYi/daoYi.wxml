@@ -1,0 +1,44 @@
+<!--pages/daoYi/daoYi.wxml 导医-->
+<view wx:if="{{statu}}" class="container">
+  <!--右边楼层-->
+  <view class="floors radiusCenter">
+    <view class="floor {{floorId==1?'cur':''}}">1F</view>
+    <view class="floor {{floorId==2?'cur':''}}">2F</view>
+    <view class="floor {{floorId==3?'cur':''}}">3F</view>
+  </view>
+  <!--左边项目-->
+  <scroll-view scroll-y class="projects" style="height: {{ touch.scaleHeight - 10 }}px;">
+    <view wx:for="{{project}}" class="project {{item.route_number==curNumber?'cur':''}}" data-code="{{item.route_number}}" bindtap="projectBind">
+      <text class="index radiusMax">{{index+1}}</text>
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <!--地图-->
+  <view class="mapImg" style="width: {{viewWidth}}px;height: {{viewWidth}}px;">
+    <zoomImgByView 
+          id='mapLayout'
+          img_src="{{imgsrc}}"
+          view_width="{{viewWidth}}"
+          view_height="{{viewHeight}}"
+          page_width="{{reswidth}}" /> 
+    <view wx:if="{{floorGuide.length != 1}}" data-step="{{stepId}}" class="elevator radiusMin" bindtap="getElevator">{{stepId == 0?'切换下一段路线':''}}{{stepId == 1?'切换上一段路线':''}}</view>
+  </view>
+  <!--下边菜单-->
+  <view class="height" style="height: 392rpx;"></view>
+  <view class="bottom">
+    <view class="route">
+      <view class="title">导航路线</view>
+      <scroll-view class="path" scroll-y="true">
+        <block wx:for="{{floorGuide[stepId].map_route}}">
+          <view class="li {{item.description == floorGuide[stepId].description_star?'start':''}} {{item.description == floorGuide[stepId].description_end?'end':''}}">{{item.description}}</view>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- <view class="tip" wx:if="{{floorGuide[stepId].matters}}">在扫描时候保持安静,配合医生.做腹部检查时应该保持呼吸平稳,遵从医生的指令屏气.</view> -->
+     <view class="tip"><scroll-view scroll-y="true" wx:if="{{floorGuide[stepId].matters != ''}}" class="view">{{floorGuide[stepId].matters}}</scroll-view>
+     </view> 
+  </view>
+</view>
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后再试'}}" />
+</block>

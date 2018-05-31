@@ -1,0 +1,11 @@
+<!--pages/transit/transit.wxml-->
+<view class="container">
+  <image class="bg" src="/img/loginbg.jpg"></image>
+  <!-- <image class="logo" src="/img/logo.png"></image>
+  <image class="name" src="/img/name.png"></image>  -->
+  <view class="departName">{{departName}}</view>
+  <view class="btns">
+    <view class="btn" bindtap="detailBind" data-departid="{{departId}}">科室信息</view>
+    <view class="btn" bindtap="guideBind" data-codenumber="{{guideCode}}" data-daoyiid="{{daoyiId}}">院内导航</view>
+  </view>
+</view>

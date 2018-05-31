@@ -1,0 +1,10 @@
+/* pages/evaluation/evaluation.wxss */
+@import "/pages/outpatient/outpatient.wxss";
+.scores{width: 475rpx;height: 65rpx;margin: 65rpx auto;position: relative;}
+.scores image{width: 65rpx;height: 65rpx;margin: 0 15rpx;position: absolute;top: 0;}
+.scores .perch{position: absolute;top: 0;width: 65rpx;height: 65rpx;}
+
+.langs{margin: 0 -50rpx;line-height: 68rpx;}
+.scroll-langs{height: 264rpx;}
+.lang-item{background: #e8e8e8;display: inline-block;color: #666;padding: 0 24rpx;margin: 10rpx;}
+.lang-item.cur{background: #2da3b3;color: #fff;} 

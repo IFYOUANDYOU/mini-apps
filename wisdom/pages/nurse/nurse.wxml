@@ -1,0 +1,40 @@
+<!--pages/nurse/nurse.wxml护士站-->
+<!--引入公用文件-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <!--护士站图片-->
+  <view class="graphic">
+    <image src="{{nurses.intro_img}}" mode="aspectFill"></image>
+  </view>
+  <!--护士列表-->
+  <view wx:if="{{newnurse.length != 0}}" class="nurses">
+    <view class="list">
+      <block wx:for="{{newnurse}}" wx:for-item="nurseItem">
+        <template is="graphic" data="{{...nurseItem}}" />
+      </block>
+    </view>
+    <view class="more" bindtap="nursesBind">全部护士
+      <image class="down imgTop" src="{{moreIcon}}"></image>
+    </view>
+  </view>
+  <!--健康小贴士-->
+  <view wx:if="{{nurses.tips}}" class="section">
+    <view class="title">健康小贴士
+      <!-- <text class="pull_right more">查看更多></text> -->
+    </view>
+    <view class="tips">
+      <view class="list">
+        <block wx:for="{{nurses.tips}}" wx:for-item="tipItem">
+          <template is="graphic" data="{{...tipItem}}" />
+        </block>
+         <block wx:if="{{nurses.tips.length == 0}}">
+          <view class="empty-view" style="color: #999;">暂无内容</view>
+        </block> 
+      </view>
+    </view>
+  </view>
+</view>
+<!--页面加载出错时显示-->
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

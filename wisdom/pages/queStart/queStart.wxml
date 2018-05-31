@@ -1,0 +1,19 @@
+<!--pages/queStart/queStart.wxml-->
+<view class="container">
+  <image class="qus" src="http://www.ys9958.com/public/upload/lou/qus.png" mode="aspectFill"></image>
+  <view class="header">
+    <navigator class="logo" url="/pages/hospital/hospital"><image src="/img/logo1.png" mode="aspectFill"></image></navigator>
+    <view wx:if="{{hasShare}}" class="start btn radiusCenter" bindtap="answerBegin">开始答题</view>
+    <block wx:else><button class="start btn radiusCenter" open-type="share">分享获得答题权限</button></block>
+    
+  </view>
+  <view class="rules">
+    <view class="title">活动规则</view>
+    <block wx:for="{{rules}}">
+      <view class="rule">
+      <text class="num radiusCenter">{{index+1}}</text>
+      <text class="text">{{item}}</text>
+      </view>
+    </block>
+  </view>
+</view>

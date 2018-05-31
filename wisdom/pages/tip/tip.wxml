@@ -1,0 +1,7 @@
+<!--pages/tip/tip.wxml健康小贴士-->
+<view class="container">
+  <web-view wx:if="{{tipurl != ''}}" src="{{tipurl}}"></web-view>
+  <block wx:else>
+    <text class="empty">正在更新内容，请稍后再试</text>
+  </block>
+</view>

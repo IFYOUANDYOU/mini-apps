@@ -1,0 +1,143 @@
+<!--pages/message/message.wxml 基本信息填写-->
+<import src="../template/list.wxml" />
+<view class="container">
+  <image class="bg" src="http://www.ys9958.com/public/upload/lou/msgbg.png" mode="aspectFill"></image>
+  <view class="message-main">
+    <!--患者姓名-->
+    <view class="head">
+      <input class="name radiusMax" placeholder-style="color: #fff;" type="text" placeholder="请填写患者姓名" bindinput="bindNameInput" value="{{name}}" disabled="{{isMsg}}"></input>
+    </view>
+    <view class="info">
+      <view class="item">
+        <!--患者年龄-->
+        <view class="item_title pull_left">
+          患者年龄
+        </view>
+        <view class='item_input' style='padding-right:250rpx'>
+          <input class="pull_left" type="number" bindinput="bindAgeInput" placeholder="请填写年龄" value="{{age}}" style="width: 160rpx;" disabled="{{isMsg}}" />
+          <text class="">岁</text>
+        </view>
+        <!--患者性别-->
+        <block wx:if="{{isMsg}}">
+          <text class="sex">{{sex}}</text>
+        </block>
+        <block wx:else>
+          <radio-group class="sex-group" bindchange="sexChange">
+            <label wx:for="{{items}}" class="radio ui-radio {{item.checked?'active':''}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}" />
+              <text class="text">{{item.value}}</text>
+            </label>
+          </radio-group>
+        </block>
+      </view>
+      <!--<view class="item">
+        患者病案号
+        <view class="item_title pull_left">
+          病案号
+        </view>
+        <view class='item_input' style='padding-right:250rpx'>
+          <input bindinput="bindNumInput" placeholder="请填写病案号" value="{{bahNo}}" disabled="{{isMsg}}" />
+        </view>-->
+        <!--患者床号
+        <view class='item_no'>
+          <text class="pull_left">床号</text>
+          <input class="no pull_left" type="number" bindinput="bindBednoInput" placeholder="请填写床号" value="{{bedno}}" disabled="{{isMsg}}" />
+        </view>
+      </view>-->
+      <!--就诊科室-->
+      <view class="item {{isMsg?'':'arrow'}}">
+        <view class="item_title pull_left">
+          就诊科室
+        </view>
+        <view class='item_input'>
+          <block wx:if="{{isMsg}}">
+            <text>{{depart?depart:'未选择'}}</text>
+          </block>
+          <block wx:else>
+            <picker bindchange="bindDepartChange" value="{{departIndex}}" range="{{departs}}" range-key="{{'name'}}">
+              <view class="picker {{depart?'':'no'}}">
+                {{departId!=""?departs[departIndex].name:'请选择'}}
+              </view>
+            </picker>
+          </block>
+        </view>
+      </view>
+      <!--经治医师-->
+      <view class="item {{isMsg?'':'arrow'}}">
+        <view class="item_title pull_left">
+          经治医师
+        </view>
+        <view class='item_input'>
+          <block wx:if="{{isMsg}}">
+            <text>{{doctor?doctor:'未选择'}}</text>
+          </block>
+          <block wx:else>
+            <view bindtap="bindDoctorPoupe" class="{{doctors[doctorIndex].doctor_name?'':'no'}}">{{doctors[doctorIndex].doctor_name?doctors[doctorIndex].doctor_name:'请选择'}}</view>
+          </block>
+        </view>
+        <!--经治医生弹窗-->
+        <view wx:if="{{doctorPoupe}}" class="pickerView">
+          <view class="bj"></view>
+           <view class="btns">
+            <text class="cancel pull_left" bindtap="doctorClose">取消</text>
+            <text class="confirm pull_right" bindtap="doctorConfirm">确定</text>
+          </view> 
+          <picker-view indicator-style="height: 40px;" style="width: 100%; height: 180px;" bindchange="bindDoctorChange">
+            <picker-view-column>
+              <view style="line-height: 40px" data-id="000">请选择</view>
+              <view wx:for="{{doctors}}" style="line-height: 40px" data-id="{{item.id}}">{{item.doctor_name}}</view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+      </view>
+      <!--出院诊断-->
+      <view class="item">
+        <view class="item_title pull_left">
+          出院诊断
+        </view>
+        <view class='item_input'>
+          <input bindinput="bindDisInput" placeholder="请填写疾病" value="{{dis}}" disabled="{{isMsg}}" />
+        </view>
+      </view>
+      <!--住院日期-->
+      <view class="item">
+        <view class="item_title pull_left">
+          住院日期
+        </view>
+        <view class='item_input'>
+          <block wx:if="{{isMsg}}">
+            <text class="pull_left">{{sDate}}</text>
+          </block>
+          <block wx:else>
+            <picker class="pull_left" mode="date" value="请选择" start="{{startDate}}" end="{{endDate}}" bindchange="bindStartChange">
+              <view class="picker">
+                {{sDate?sDate:'请选择'}}
+              </view>
+            </picker>
+          </block>
+          <text class="boundary pull_left">-</text>
+          <view class="picker pull_left">
+            {{endDate}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--提交-->
+    <view wx:if="{{!isMsg}}" class="btm-btn">
+      <button class="btn btns next radiusMax" bindtap="goSubmit">提交</button>
+    </view>
+  </view>
+  <!--提示-->
+  <view class="message">
+    <view class="h1">出院后注意事项</view>
+    <view class="h2">
+      <view>出院后请注意休息，严观症状</view>
+      <view>饮食低盐低脂，规律作息，适当锻炼</view>
+      <view>如有不适请及时就医</view>
+    </view>
+  </view>
+</view>
+<!--页面加载出错时显示-->
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

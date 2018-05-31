@@ -1,0 +1,85 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wxfe622ecb24f4033f",
+	"projectname": "wisdom",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 1,
+					"name": "院内导航",
+					"pathName": "pages/index/index",
+					"query": "option=&departId=&guideCode=A01701&daoyiId=1&daoyi=&hotapp=1",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "透视导航",
+					"pathName": "pages/index/index",
+					"query": "option=&departId=3&guideCode=A01702&daoyiId=2&daoyi=&hotapp=1",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "导医",
+					"pathName": "pages/index/index",
+					"query": "option=&departId=&guideCode=&daoyiId=2&daoyi=&hotapp=1",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "跳转页面直接扫描",
+					"pathName": "pages/index/index",
+					"query": "scan=scan",
+					"scene": "1035",
+					"referrerInfo": {
+						"appId": "wxfe622ecb24f4033f"
+					}
+				},
+				{
+					"id": -1,
+					"name": "跳转页面直接扫描",
+					"pathName": "pages/advertising/advertising",
+					"query": "",
+					"scene": "1035",
+					"referrerInfo": {
+						"appId": "wxfe622ecb24f4033f"
+					}
+				},
+				{
+					"id": 5,
+					"name": "分享",
+					"pathName": "pages/getcard/getcard",
+					"query": "userId=242",
+					"scene": "1007"
+				}
+			]
+		}
+	}
+}

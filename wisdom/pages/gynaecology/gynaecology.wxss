@@ -1,0 +1,31 @@
+/* pages/gynaecology/gynaecology.wxss */
+.container{background:-webkit-gradient(linear, left top, right bottom, from(#1aacb5), to(#26a6bf));}
+.bg{position: absolute;left: 0;top: 50rpx;width: 100%;height: 100%;z-index: 0;}
+.section{margin: 0 24rpx 24rpx;overflow: hidden;color: #999;line-height: 44rpx;font-size: 24rpx;position: relative;z-index: 2;}
+.section .title{font-size: 30rpx;color: #07b6a5;padding: 16rpx 24rpx 0;}
+.section .scroll-view_H{display: flex;align-content: center;align-self: center;align-items: flex-start;white-space: nowrap;}
+.h1{border-bottom: 10rpx solid #fff;height: 40rpx;background: #fff;}
+.h1 image{width: 750rpx;height: 40rpx;}
+.doctors{background-color: #fff;margin-top: 48rpx;}
+.doctors .list{margin-top: 16rpx;padding: 0 10rpx 24rpx;}
+.doctors .doctor-item{display: inline-block;text-align: center;width: 140rpx;height: 240rpx;margin: 0 10rpx;}
+.doctors .graphic{width: 140rpx;height: 140rpx;}
+.doctors .text{color: #333;}
+.doctors .physician{font-size: 24rpx;}
+.main{position: relative;margin: 0 24rpx;}
+.menus{position: absolute;left: 0;width: 100%;height: 60rpx;top: 24rpx;line-height: 60rpx;display: flex;justify-content: center;align-items: center;z-index: 3;}
+.menus .menu{width: 42%;margin: 0 2%;text-align: center;color: #fff;background: #c1c1c1;}
+.menus .menu.cur{background:-webkit-gradient(linear, left top, right bottom, from(#26a6bf), to(#07b6a5));}
+.main .contents{overflow: hidden;}
+.main .section{margin: 0 0 24rpx;}
+.main .section:first-child{margin-top: 24rpx;}
+.introduce{background: #fff;padding: 94rpx 24rpx 12rpx;}
+.advantages{background: #fff;}
+.advantages .list{padding: 12rpx;color: #fff;overflow: hidden;}
+.advantages .article-item{width: 50%;overflow: hidden;float: left;}
+.advantages .view{margin: 12rpx;padding: 14rpx 15rpx;background:-webkit-gradient(linear, left top, right bottom, from(#24a7bd), to(#0ab4a8));border-radius: 10rpx;}
+.advantages .article-title{font-size: 34rpx;}
+.advantages .article-text{line-height: 32rpx;margin-top: 12rpx;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;height: 96rpx;white-space: pre-wrap;}
+.advantages .article-text text{display: block;}
+.classicCase{background: #fff;}
+.classicCase .ccase-item{margin: 0 24rpx;padding: 24rpx 0 18rpx;}

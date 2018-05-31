@@ -1,0 +1,20 @@
+/* pages/share/share.wxss */
+page{}
+.top,.notice{text-align: center;}
+.top{height: 217rpx;background-color: #fff;padding: 40rpx 0;}
+.top image{width: 159rpx;height: 217rpx;}
+.main{position: absolute;top: 267rpx;left: 0;width: 100%;bottom: 0;background: url(http://www.ys9958.com/public/upload/lou/sbg2.png) no-repeat top center;background-size: 100% 100%;text-align: center;font-size: 32rpx;color: #fff;display: flex;flex-direction: column;justify-content: space-between;}
+.main .head,.main .rules{margin: 0 45rpx;}
+.main .msg{width: 579rpx;height: 237rpx;margin-top: 130rpx;margin-bottom: 30rpx;}
+.main .share{background-color: #fff;box-shadow: 0 6rpx 16rpx #2da3b3;font-size: 36rpx;height: 98rpx;line-height: 98rpx;margin-bottom: 30rpx;color: #2da3b3;}
+.main .rules {background: rgba(255, 255, 255, 0.8);color: #999;font-size: 28rpx;padding: 24rpx;margin-bottom: 45rpx;}
+.rules image{width: 413rpx;height: 31rpx;}
+.rules .rule{margin: 22rpx 0;text-align: left;}
+.rules .num{display: block;border: 1rpx solid #999;width: 26rpx;height: 26rpx;text-align: center;line-height: 26rpx;float: left;margin-right: 8rpx;}
+.rules .text{display: block;line-height: 30rpx;}
+
+.pouple{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.pouple .close{position: absolute;top: 12rpx;right: 12rpx;}
+.pouple .close image{width: 38rpx;height: 38rpx;}
+.pouple .view,.pouple .go,.pouple .go image{width: 548rpx;height: 380rpx;}
+.pouple .view{position: relative;z-index: 11;}

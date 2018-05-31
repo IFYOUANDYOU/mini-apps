@@ -1,0 +1,22 @@
+<!--pages/share/share.wxml-->
+<view class="container">
+  <view class="top">
+    <image src="/img/stp.png" mode="aspectFill"></image>
+  </view>
+  <view class="main">
+    <view class="head">
+      <image class="msg" src="/img/smsg.png" mode="aspectFill"></image>
+      <button class="btn share radiusCenter" bindtap="share" open-type="share">点击分享</button>
+      <view class="more">邀请朋友一起领取</view>
+    </view>
+    <view class="rules radiusCenter">
+      <image src="/img/stt.png" mode="aspectFill"></image>
+      <block wx:for="{{rules}}">
+        <view class="rule">
+          <text class="num radiusCenter">{{index+1}}</text>
+          <text class="text">{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

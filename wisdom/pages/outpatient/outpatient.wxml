@@ -1,0 +1,34 @@
+<!--pages/evaluation/evaluation.wxml-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <view class="tt">
+    门诊随访
+    <text>请选择您就诊的科室和医生</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="item radiusCenter">
+      <picker bindchange="bindDepartChange" value="{{departIndex}}" range="{{departs}}" range-key="{{'name'}}">
+        <view class="picker input {{depart?'':'no'}}">
+          {{departId!=""?departs[departIndex].name:'请选择科室'}}
+        </view>
+      </picker>
+    </view>
+    <!--选择医生-->
+    <view class="item radiusCenter">
+      <picker bindtap="bindDoctorChangeBefore" bindchange="bindDoctorChanges" value="{{doctorIndex}}" range="{{doctors}}" range-key="{{'doctor_name'}}" disabled="{{doctors.length!=0?false:true}}">
+        <view class="picker input {{doctor?'':'no'}}">
+          {{doctorId!=""?doctors[doctorIndex].doctor_name:'请选择医生'}}
+        </view>
+      </picker>
+    </view>
+    <view class="item radiusCenter">
+      <input type="number" class="input" maxlength="10" name="number" placeholder="请输入您的门诊号"></input>
+    </view>
+    <view class="item">
+      <button class="btn radiusCenter" formType="submit">去评价</button>
+    </view>
+  </form>
+  <view class="tag">
+    <image src="/img/etag.png" mode="aspectFill"></image>
+  </view>
+</view>

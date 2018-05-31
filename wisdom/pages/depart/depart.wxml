@@ -1,0 +1,79 @@
+<!--pages/depart/depart.wxml科室介绍-->
+<!--引入公用文件-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container {{flexmenu?'flex':''}}">
+  <!--科室图片-->
+  <view class="graphic" id="graphic">
+    <image src="{{departInfo.department.intro_img}}" mode="aspectFill"></image>
+  </view>
+  <!--科室评分、接诊量-->
+  <view class="department">
+    <view class="level one">
+      <text class="name pull_left">{{departInfo.department.name}}</text>
+      <text wx:if="{{departInfo.department.special != 2}}" class="amount">接诊量：{{departInfo.department.reception}}/次</text>
+    </view>
+    <view class="level two">
+      <text class="pull_left">综合评分</text>
+      <image class="score" src="/img/star{{departInfo.department.score}}.png" mode="aspectFill"></image>
+    </view>
+    <!--菜单-->
+    <view class="menus">
+      <view class="menu {{menuindex==1?'cur':''}}" data-typeindex="1" bindtap="menuBind">
+        <text>科室介绍</text>
+      </view>
+      <view class="menu {{menuindex==2?'cur':''}}" data-typeindex="2" bindtap="menuBind">
+        <text>医生风采</text>
+      </view>
+      <view class="menu {{menuindex==3?'cur':''}}" data-typeindex="3" bindtap="menuBind">
+        <text>经典案例</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="matter">
+    <!--科室介绍-->
+    <view wx:if="{{menuindex == '1'}}" class="sections intro">
+      <!--科室介绍-->
+      <view class="section">
+        <view class="h2">【科室介绍】</view>
+        <view class="introduce">{{departInfo.department.part_intro?departInfo.department.part_intro:'暂无内容'}}</view>
+      </view>
+      <!--诊疗范围-->
+      <view class="section">
+        <view class="h2">【诊疗范围】</view>
+        <view class="range">{{departInfo.department.part_title?departInfo.department.part_title:'暂无内容'}}</view>
+      </view>
+    </view>
+    <!--医生风采-->
+    <view wx:if="{{menuindex == '2'}}" class="sections experts">
+      <view wx:if="{{departInfo.doctor.length != 0}}" class="list">
+        <block wx:for="{{departInfo.doctor}}" wx:for-item="expertItem">
+          <template is="expert" data="{{...expertItem}}" />
+        </block>
+      </view>
+      <block wx:if="{{departInfo.doctor.length == 0}}">
+        <view class="empty">暂无内容</view>
+      </block>
+    </view>
+    <!--经典案例-->
+    <view wx:if="{{menuindex == '3'}}" class="sections cases">
+      <view wx:if="{{departInfo.case.length != 0}}" class="list">
+        <block wx:for="{{departInfo.case}}" wx:for-item="caseItem">
+          <template is="case" data="{{...caseItem}}" />
+        </block>
+      </view>
+      <block wx:if="{{departInfo.case.length == 0}}">
+        <view class="empty">暂无内容</view>
+      </block>
+    </view>
+  </view>
+  <view class="flex-placeholder" style="height: 136rpx;"></view>
+  <view wx:if="{{departInfo.department.special != 2}}" class="flex-bottom">
+    <view class="flex-pd">
+      <button class="route btn" data-number="{{departInfo.department.serial_number}}" bindtap="routeBind">导医路线</button>
+    </view>
+  </view>
+</view>
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

@@ -1,0 +1,22 @@
+<!--pages/followup/followup.wxml随访-->
+<view class="container index-main">
+  <image class="bg" src="../../img/loginbg.jpg" mode="aspectFill"></image>
+  <!--顶部图片-->
+  <view class="head">
+    <image src="../../img/healthcare.png" mode="aspectFill"></image>
+  </view>
+  <view class='index-msg'>
+    <view class="h1">诊后康复管理</view>
+    <view class="h2">免费随访为您的健康护航</view>
+    <view class="h3">完成随访有助于保持健康阻止疾病的复发,绑定手机号码是您后续获得医疗服务的凭证，请保持真实性。</view>
+  </view>
+  <!--下一步-->
+  <view class="index-bottom">
+    <view class="flex-bottom">
+      <view class="btm-btn">
+        <view class="btns next radiusMax" bindtap="followup">住院随访</view>
+        <navigator class="btns next radiusMax" url="/pages/outpatient/outpatient">门诊评价</navigator> 
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/doctor/doctor.wxml医生介绍-->
+<!--引入公用文件-->
+<import src="../template/list.wxml" />
+<view wx:if="{{statu}}" class="container">
+  <!--医生个人信息介绍-->
+  <view wx:if="{{doctor}}" class="section">
+    <view class="doctor-item" data-id="{{doctor.id}}">
+      <view class="doctor-portrait pull_left">
+        <image class="portrait" src="{{doctor.doctor_img?doctor.doctor_img:'/img/default.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="item-msg">
+        <view class="doctor-name">
+          <text class="name">· {{doctor.doctor_name}}</text>
+          <text class="depart">{{doctor.part_id}}</text>
+          <view class="titles">{{doctor.occupation_id}}</view>
+        </view>
+        <view class="doctor-titles">
+          <view>· {{doctor.honorary_title}}</view>
+          <view>· {{doctor.honor_two}}</view>
+        </view>
+        <view wx:if="{{doctor.recommend}}" class="doctor-score">
+          <text class="pull_left">评分：</text><image class="score" src="/img/score{{doctor.recommend}}.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--专家简介-->
+  <view wx:if="{{doctor.intro}}" class="section">
+    <view class="title">专家简介</view>
+    <view class="abstract">{{doctor.intro}}</view>
+  </view>
+  <!--擅长疾病-->
+  <view wx:if="{{doctor.good_at}}" class="section">
+    <view class="title">擅长疾病</view>
+    <view class="disease">{{doctor.good_at}}</view>
+  </view>
+  <!--患者评价-->
+  <view wx:if="{{comment.length != 0}}" class="section">
+    <view class="title">患者评价
+      <!-- <text class="pull_right more">查看更多></text> -->
+    </view>
+    <view class="evaluation">
+      <view class="list">
+        <block wx:for="{{comment}}" wx:for-item="evalItem">
+          <template is="evaluation" data="{{...evalItem}}" />
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<block wx:if="{{statu == false}}">
+  <template is="error" data="{{...errorItem,text: '加载出错，请稍后重试'}}" />
+</block>

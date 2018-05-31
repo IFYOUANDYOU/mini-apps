@@ -1,0 +1,2 @@
+/* pages/record/record.wxss */
+.record-main{margin: 0 24rpx;}

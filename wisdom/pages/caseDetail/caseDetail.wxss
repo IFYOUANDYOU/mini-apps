@@ -1,0 +1,7 @@
+/* pages/caseDetail/caseDetail.wxss */
+.graphic,.graphic image{width: 750rpx;height: 480rpx;}
+.section{margin: 50rpx 24rpx;line-height: 40rpx;color: #999;}
+.section .h1{font-size: 40rpx;line-height: 44rpx;}
+.section .h1 .date{color: #999;font-size: 28rpx;}
+.section .h1,.section .h2{margin-bottom: 42rpx;color: #333;}
+.section .abstract{background-color: #f0f0f0;padding: 12rpx 24rpx;}
