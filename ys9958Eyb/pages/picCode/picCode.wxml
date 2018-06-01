@@ -1,0 +1,29 @@
+<!--pages/picCode/picCode.wxml-->
+<view class="container">
+  <view class="page-body">
+    <button bindtap='bindTwoCode'>扫码</button>
+    <view class='twocode' >点击扫码,成功后可开启上传图片功能</view>
+    <view>这是返回的扫码结果：{{result}}</view>
+    <form>
+      <view class="page-section" wx:if='{{isShowImage}}'>
+        <view class="weui-uploader__hd">
+          <view class="weui-uploader__title">点击可预览选好的图片</view>
+          <view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+        </view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files">
+            <block wx:for="{{imageList}}" wx:for-item="image">
+              <view class="weui-uploader__file">
+                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
+      </view>
+    </form>
+    <button bindtap='upLoadImg'>上传图片</button>
+  </view>
+</view>

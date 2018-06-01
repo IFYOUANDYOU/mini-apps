@@ -1,0 +1,25 @@
+<!--pages/about/about.wxml 关于我们-->
+<view class='container'>
+  <view class="content-about">
+    <web-view class="main" src='https://www.ys9958.com/localWeb/eryibao/about.html'>
+    </web-view>
+    <!-- <view class="content">
+      <view class="logo">
+        <view class="img">
+          <image src='/images/logo.png'></image>
+        </view>
+        <view class='h2'>儿医宝</view>
+        <view class='h3'>您家门口的儿童医院！</view>
+      </view>
+      <web-view class="main" src='https://www.ys9958.com/localWeb/eryibao/about.html'>
+      </web-view>
+      <view class="tel">
+        客服电话：
+        <view>023-61853888</view>
+      </view>
+    </view>
+    <view class="copyright">
+      Copyright © 2016 重庆医盟健康管理有限公司
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,70 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 28rpx;
+} 
+.navigator-hover{background-color: transparent;}
+.pull-left{float: left;}
+.pull-right{float: right;}
+.gradient{background-image: -moz-linear-gradient(left, #ff6064, #ff8d6b);background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #ff6064), color-stop(1, #ff8d6b));filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6064', endColorstr='#ff8d6b', GradientType='0');}
+.ellipsis{display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+/*顶部广告图*/
+.index-ad .ad{width: 750rpx;}
+
+/******套餐详情、绿色就诊、订单详情title、就诊码title******/
+.content-package,.content-orderDt,.content-verify{padding: 0 40rpx;}
+.content-package .section{}
+.content-package .title,.content-orderDt .title,.content-verify .title{padding: 20rpx 0;line-height: 80rpx;font-size: 48rpx;}
+/*服务详情*/
+.content-package .service{padding: 20rpx 0;border-bottom: 2rpx dotted #e1e1e1;min-height: 68rpx;}
+.services .icon{width: 68rpx;height: 68rpx;border-radius: 34rpx;margin-top: 5rpx;} 
+.services .info{margin: 0 0 0 82rpx;line-height: 40rpx;}
+.services .h1{font-size: 30rpx;margin-bottom: 10rpx;}
+.services .h2{font-size: 26rpx;color: #999;}
+/*注意事项*/
+.content-package .notice{padding-bottom: 50rpx;border-bottom: 2rpx dotted #e1e1e1;color: #999;font-size: 26rpx;line-height: 40rpx;}
+/*套餐价格*/
+.content-package .price{line-height: 60rpx;padding: 20rpx 0 0;}
+.content-package .price .original{color: #999;text-decoration: line-through;}
+.content-package .price .small,.content-package .price .present{color: #ff6064;font-weight: bold;}
+.content-package .price .present{font-size: 36rpx;}
+.content-package .price .i{color: #333;}
+.content-package .price .original{font-weight: 100;margin-left: 10rpx;}
+/*购买 预约*/
+.content-package .fill-btn{height: 124rpx;}
+.content-package .fix-btns{position: fixed;bottom: 0;left: 0;right: 0;background-color: #fff;padding: 24rpx;}
+.content-package .btn{font-size: 32rpx;border-radius: 0;height: 80rpx;}
+.content-package button[type="default"][plain].buy{color: #fff;border: none;}
+.content-package button[type="default"][plain][disabled].buy{background-color: #c1c1c1;}
+/*分享*/
+.share-fixed{position: fixed;right: 24rpx;bottom: 124rpx;}
+.share-fixed button[type="default"][plain].share{border: none;background-color: #fff;padding: 0;border-radius: 0;}
+.share-fixed image{width: 88rpx;height: 88rpx;background-color: #fff;border-radius: 5rpx;}
+
+/*列表为空*/
+.empty-list{text-align: center;color: #c1c1c1;background-color: #fff;position: fixed;left: 0;top: 0;width: 100%;height: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+.empty-list image{width: 148rpx;height: 113rpx;margin-bottom: 16rpx;}
+
+/*弹窗*/
+.modal-box{position:fixed;width:100%;height:100%;top: 0px;background:rgba(0,0,0,0.4);overflow: hidden;}
+.modal-body{position: absolute;bottom: 0;left: 0;width: 100%;}
+.modal-close{position: absolute;top: 12rpx;right: 12rpx;width: 24rpx;height: 24rpx;}
+/******评价弹窗******/
+.content-eval{text-align: center;padding: 40rpx;background-color: #fff;}
+.content-eval .title{font-size: 34rpx;}
+.content-eval .scores{margin: 40rpx 0;}
+.content-eval .stars{width: 400rpx;height: 59rpx;margin: 0 auto;position: relative;}
+.content-eval .stars image{width: 62rpx;height: 59rpx;margin: 0 9rpx;position: absolute;top: 0;}
+.content-eval .stars .item{position: absolute;top: 0;width: 62rpx;height: 59rpx;}
+.content-eval .score-star{width: 434rpx;height: 59rpx;}
+.content-eval .describe{background-color: #f2f2f2;width: 100%;min-height: 228rpx;padding: 10rpx;border-radius: 12rpx;}
+.content-eval .describe textarea{display: block;text-align: left;width: 100%;height: 228rpx;}
+.content-eval .btn{margin-top: 40rpx;}
+.content-eval .eval-btn{border: none;color: #fff;
+border-radius: 50rpx;overflow: hidden;}

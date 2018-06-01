@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class='container'>
+  <!--首页顶部广告-->
+  <view class='index-ad'>
+    <navigator url='/pages/package/package' open-type='navigate'>
+      <image class='ad' src='/images/top.png' mode='aspectFit'></image>
+    </navigator>
+  </view>
+  <!--首页菜单-->
+  <view class='index-menus'>
+    <!-- <view class='menu' wx:for="{{menus}}">
+      <navigator url='{{item.url}}' open-type='{{item.openType}}'>
+        <image class='icon pull-left' src='{{item.icon}}' mode='aspectFit'></image>
+        <view class='text'>{{item.title}}
+          <text> | {{item.desc}}</text>
+        </view>
+      </navigator>
+    </view> -->
+    <view class='menu'>
+      <navigator url='/pages/greenSee/greenSee' open-type='navigate'>
+        <image class='icon pull-left' src='../../images/menu01.png' mode='aspectFit'></image>
+        <view class='text'>绿色就诊
+          <text> | 快捷就诊无需等待</text>
+        </view>
+      </navigator>
+    </view>
+    <view class='menu'>
+      <navigator url='/pages/weekly/weekly' open-type='navigate'>
+        <image class='icon pull-left' src='../../images/menu02.png' mode='aspectFit'></image>
+        <view class='text'>健康周报
+          <text> | 健康周报疾病预防</text>
+        </view>
+      </navigator>
+    </view>
+    <view class='menu'>
+      <navigator url='/pages/activity/activity' open-type='navigate'>
+        <image class='icon pull-left' src='../../images/menu03.png' mode='aspectFit'></image>
+        <view class='text'>专家讲座
+          <text> | 权威专家线下讲座</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='index-fix-bottom'>
+    <!--个人中心-->
+    <view class='index-center'>
+      <navigator url='/pages/center/center' open-type='navigate'>
+        <text>个人中心</text>
+      </navigator>
+    </view>
+    <!--意见反馈-->
+    <view class='index-feedback'>
+      <button class='contact' plain='true' open-type='contact'>意见反馈</button>
+    </view>
+  </view>
+</view>

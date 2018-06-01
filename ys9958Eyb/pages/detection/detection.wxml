@@ -1,0 +1,48 @@
+<!--pages/detection/detection.wxml-->
+
+<!--基本信息收集-->
+<view class='container'>
+  <view class='detection-form'>
+    <view class='prompt'>
+      <view>资料填写</view>
+      <text>填写宝宝的信息,让我们为您提供更专业的服务</text>
+    </view>
+    <form class='form-msg' bindsubmit="formSubmit" bindreset="formReset">
+      <view class='form-item'>
+        <text class='form-text'></text>
+        <view class='form-input'>
+          <input placeholder="姓名" confirm-type='next' value='{{name}}' bindinput='bindNameInput' name='name' focus/>
+        </view>
+      </view>
+      <view class='form-item sex-select' bindtap='bindSexChange'>
+        <text class='form-text'></text>
+        <view class='form-input'>
+          <input placeholder="性别" value='{{sexChange ? sex[sexId] : ""}}' confirm-type='next' name='sex'/>
+        </view>
+      </view>
+      <view class='form-item'>
+        <text class='form-text'>cm</text>
+        <view class='form-input'>
+          <input placeholder="身高" number confirm-type='next' value='{{height}}' bindinput='bindHeightInput' name='height'/>
+        </view>
+      </view>
+      <view class='form-item'>
+        <text class='form-text'>kg</text>
+        <view class='form-input'>
+          <input placeholder="体重" number confirm-type='next' value='{{weight}}' bindinput='bindWeightInput' name='weight'/>
+        </view>
+      </view>
+      <view class='form-item'>
+        <text class='form-text'></text>
+        <view class='form-input'>
+          <input placeholder="年龄" number confirm-type='next' value='{{age}}' bindinput='bindAgeInput'  name='age'/>
+        </view>
+      </view>
+      <view class="form-btn">
+        <button formType="submit">
+          <image class='ad' src='/images/submit.jpg' mode='aspectFit'></image>
+        </button>
+      </view>
+    </form>
+  </view>
+</view>

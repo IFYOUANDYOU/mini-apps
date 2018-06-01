@@ -1,0 +1,10 @@
+<!--logs.wxml-->
+<view class="container">
+  <swiper class="post-swiper" circular="true" autoplay="true" indicator-dots="true">
+      <block wx:for="{{swiperData}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.imgSrc}}" bindtap="onPostTap" data-post-id="{{item.postId}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

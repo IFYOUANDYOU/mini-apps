@@ -1,0 +1,36 @@
+<template name="evaluation-0">
+  <view class='content-eval'>
+    <form>
+      <view class='title'>就诊满意度评价</view>
+      <view class='scores'>
+        <view class='stars'>
+          <block wx:for="{{stars}}">
+            <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ? selectedStar : normalStar}}">
+              <view class="item" style="left: 0" data-key="{{item+1}}" bindtap="selectStar"></view>
+            </image>
+          </block>
+        </view>
+      </view>
+      <view class='describe'>
+        <textarea bindblur="bindTextAreaBlur" auto-height placeholder="请在此填写评价..." />
+      </view>
+      <view class='btn'>
+        <button class='eval-btn gradient' plain='true'>提交</button>
+      </view>
+    </form>
+  </view>
+</template>
+
+<template name="evaluation-1">
+  <view class='content-eval'>
+    <form>
+      <view class='title'>就诊满意度评价</view>
+      <view class='scores'>
+        <image src="/images/{{score}}-star.png" class="score-star"></image>
+      </view>
+      <view class='describe'>
+        <textarea bindblur="bindTextAreaBlur" auto-height placeholder="请在此填写评价..." disabled='disabled' />
+      </view>
+    </form>
+  </view>
+</template>

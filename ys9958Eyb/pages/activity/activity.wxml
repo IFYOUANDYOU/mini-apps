@@ -1,0 +1,32 @@
+<!--pages/activity/activity.wxml 专家活动讲座-->
+<view class='container'>
+  <!--顶部广告-->
+  <view class='index-ad'>
+    <image class='ad' src='/images/activity.jpg' mode='aspectFill'></image>
+  </view>
+  <!--专家团队介绍-->
+  <view class='experts-text'>
+    <text>{{teamDesc}}</text>
+  </view>
+  <!--专家团队-->
+  <view class='experts-list'>
+    <view class='title'>
+      <image src='/images/team.png' mode='aspectFill'></image>
+    </view>
+    <view>
+      <view wx:for='{{experts}}' class='experts-item' data-id='{{item.doctor_id}}'>
+        <view class='img'><image class='portrait' src='{{item.img}}' mode='aspectFill'></image></view>
+        <view class='info'>
+          <view class='name'>{{item.name}}
+            <text> {{item.position}}</text>
+          </view>
+          <!-- <view class='inaugurat'>{{item.hospital}} {{item.department}}</view> -->
+          <view class='goodat'>
+            <!-- 擅长： -->
+            <text>{{item.describe}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

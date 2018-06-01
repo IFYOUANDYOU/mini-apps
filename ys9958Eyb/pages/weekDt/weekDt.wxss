@@ -1,0 +1,6 @@
+/* pages/weekDt/weekDt.wxss */
+/*健康资讯详情*/
+.content-newsDt{padding: 24rpx;color: #666;line-height: 44rpx;}
+.content-newsDt .title{margin-bottom: 12rpx;font-size: 30rpx;color: #333;}
+.content-newsDt .tag{font-size: 26rpx;}
+.content-newsDt img{width: 100%;margin: 20rpx auto;}

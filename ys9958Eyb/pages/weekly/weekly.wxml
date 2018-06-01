@@ -1,0 +1,24 @@
+<!--pages/weekly/weekly.wxml 健康周报-->
+<view class='container'>
+  <!--健康分析报告列表-->
+  <view class='content-weekly'>
+    <view class='weekly-list'>
+      <view class='empty-list' wx:if='{{hasNoWeeks}}'>
+        <image src='/images/empty.png' mode='aspectFit'></image>
+        <view>您还未购买服务</view>
+      </view>
+      <view wx:for='{{weeks}}' class='weekly' bindtap='weekDt' data-article_id='{{item.article_id}}'>
+        <view class='thumbnail pull-left'>
+           <image src='{{item.img}}' mode='aspectFill'></image> 
+        </view>
+        <view class='info'>
+          <view class='h1 ellipsis'>{{item.title}}</view>
+          <view class='h2 ellipsis'>{{item.abstract}}</view>
+          <view>
+            <text class='time'>{{item.article_time}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

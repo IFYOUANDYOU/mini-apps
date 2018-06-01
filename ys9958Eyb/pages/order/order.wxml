@@ -1,0 +1,27 @@
+<!--pages/order/order.wxml 我的就诊服务-->
+
+<!--我的就诊服务-->
+<view class='container'>
+  <view class='content-order'>
+    <view class='empty-list' wx:if='{{hasNoOrder}}'>
+      <image src='/images/empty.png' mode='aspectFit'></image>
+      <view>您还未购买服务</view>
+    </view>
+    <view wx:for='{{orders}}' class='order-item'>
+      <navigator class='item' url='{{item.nameUrl}}' open-type='navigate'>
+        <view class='view'>
+          <text class='title pull-left'>{{item.order_title}}</text>
+          <text class='time pull-right'>{{item.addtime}}</text>
+        </view>
+        <view class='view'>
+          <text class='num pull-left'>No:{{item.order_sn}}</text>
+          <text class='dt pull-right'>详情</text>
+        </view>
+      </navigator>
+      <view class='view'>
+        <text class='time pull-left'>剩余次数：{{item.number_visits}} 次</text>
+        <view class='detail gradient pull-right' data-order_sn='{{item.order_sn}}' data-order_id='{{item.order_id}}' bindtap='detail'>就诊历史</view>
+      </view>
+    </view>
+  </view>
+</view>

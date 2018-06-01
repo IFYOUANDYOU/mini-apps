@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class='container'>
+  <!--首页 顶部第一部分-->
+  <view class='index-section1 section'>
+    <image class='background' src='../../images/background01.jpg' mode='aspectFit'></image>
+    <view class='contents'>
+      <view class='text'>100元VIP联购卡</view>
+      <image class='jiabohui' src='../../images/jiabohui.png' mode='aspectFit'></image>
+      <view class='text'>8月24日前，提前预购享半价购卡优惠</view>
+    </view>
+  </view>
+  <!--首页 Vip联购卡上体现-->
+  <view class='index-section2 section'>
+    <image class='background' src='../../images/background02.jpg' mode='aspectFit'></image>
+    <view class='contents'>
+      <view class='text'>-Vip联购卡上体现-</view>
+    </view>
+  </view>
+</view>

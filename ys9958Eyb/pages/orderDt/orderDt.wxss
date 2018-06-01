@@ -1,0 +1,16 @@
+/* pages/orderDt/orderDt.wxss */
+.content-orderDt .section{border-bottom: 2rpx dotted #e1e1e1;padding: 12rpx 0;}
+.content-orderDt .history .section:last-child{border: none;}
+.content-orderDt .item{display: flex;align-items: center;justify-content: space-between;overflow: hidden;line-height: 36rpx;padding: 8rpx 0;}
+.content-orderDt .text{color: #999;}
+.content-orderDt .situation,.content-orderDt .service{color: #ff595f;font-weight: bold;}
+.content-orderDt .service text{color: #333;}
+.content-orderDt .dtitle{text-align: center;padding: 24rpx 0;position: relative;}
+.content-orderDt .dtitle::before,.content-orderDt .dtitle::after{content: '';display: block;width: 35%;height: 2rpx;background-color: #e1e1e1;position: absolute;top: 50%;margin-top: -1rpx;}
+.content-orderDt .dtitle::before{left: 0;}
+.content-orderDt .dtitle::after{right: 0;}
+.content-orderDt .amount{padding: 50rpx 0;}
+.content-orderDt .price{font-weight: bold;font-size: 58rpx;}
+.content-orderDt .doubt{padding-top:24rpx;}
+.content-orderDt .doubt button{color: #999;font-size: 28rpx;border-radius: 0;border: none;}
+.content-orderDt .doubt button::after{border: none;border-radius: 0;}

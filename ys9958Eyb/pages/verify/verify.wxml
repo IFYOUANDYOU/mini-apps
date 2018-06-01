@@ -1,0 +1,24 @@
+<!--pages/verify/verify.wxml-->
+<!--就医验证码-->
+<view class='container'>
+  <view class='content-verify'>
+    <view class='title'>就诊码</view>
+    <view class='text'>
+      <view>就诊码用于确认用户就诊信息，</view>
+      <view>请向医院分诊台出示您的就诊码。</view>      
+    </view>
+    <view class='text'>
+      <view>在没有完成就医时，不会影响到您的就医次数。</view>
+      <view>不要向工作人员以外的人分享就诊码。</view>      
+    </view>
+    <!--验证码-->
+    <view class='code-box'>
+      <view class='code'>{{show_data.code_num}}</view>
+    </view>
+    <view class='text'>
+      <view>就诊医院：{{show_data.hospital}}</view>
+      <view>请于{{show_data.usetime}}日前使用，逾期就诊码将作废。</view>
+    </view>
+    <view class='phoneNum text' bindtap='phoneCall'>客服电话：{{show_data.customer}}</view>
+  </view>
+</view>

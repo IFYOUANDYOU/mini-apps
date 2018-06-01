@@ -1,0 +1,14 @@
+/**index.wxss**/
+.section{width: 100%;position: relative;}
+.section .text{font-size: 26rpx;}
+.section .background{display: block;}
+.index-section1{height: 423rpx;}
+.index-section1 .contents{position: absolute;top: 50%;left: 0;width: 100%;text-align: center;margin-top: -105rpx;}
+.index-section1 .background{width: 750rpx;height: 423rpx;}
+.index-section1 .text{font-size: 26rpx;color: #f2df9d;line-height: 30rpx;}
+.index-section1 .jiabohui{width: 267rpx;height: 87rpx;margin: 13rpx 0;}
+
+.index-section2{height: 28rpx;}
+.index-section2 .background{width: 750rpx;height: 28rpx;}
+.index-section2 .text{color: #fff;line-height: 28rpx;text-align: center;}
+.index-section2 .contents{position: absolute;top: 0;left: 0;width: 100%;}

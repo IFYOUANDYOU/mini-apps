@@ -1,0 +1,11 @@
+/* pages/weekly/weekly.wxss */
+page{background-color: #f2f2f2;}
+.weekly-list .weekly{background-color: #fff;margin: 20rpx 0;padding: 20rpx;overflow: hidden;}
+.weekly-list web-view{width: 100%;height: 100%;display: block;}
+.weekly-list .weekly a.block{display: block;}
+.weekly-list .thumbnail,.thumbnail image{width: 280rpx;height: 180rpx;}
+.weekly-list .info{margin-left: 310rpx;font-size: 26rpx;line-height: 44rpx;}
+.weekly-list .h1,.weekly-list .h2{margin: 10rpx 0;}
+.weekly-list .h1{font-size: 30rpx;}
+.weekly-list .h2{color: #999;}
+.weekly-list .time{background-color: #999;color: #fff;padding: 2rpx 12rpx;}

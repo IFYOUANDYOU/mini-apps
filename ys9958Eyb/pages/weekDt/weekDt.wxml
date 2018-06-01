@@ -1,0 +1,12 @@
+<!--pages/weekDt/weekDt.wxml 健康资讯详情-->
+<view class='container'>
+  <view class="content-newsDt">
+     <!-- <view class="title">{{pageInfo.title}}</view>
+    <view class="tag">
+      <text>发布时间：{{pageInfo.article_time}}</text>
+    </view>  -->
+    <view class="content">
+      <web-view src='{{article_url}}'></web-view>
+    </view>
+  </view>
+</view>

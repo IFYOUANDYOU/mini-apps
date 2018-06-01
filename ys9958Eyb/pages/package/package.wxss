@@ -1,0 +1,14 @@
+/* pages/package/package.wxss */
+
+/*顶部广告图*/
+.index-ad .ad{height: 540rpx;}
+
+/*附近医院*/
+.hospitals{margin-bottom: 10rpx;}
+.hospital{padding: 24rpx 0;font-size: 30rpx;border-bottom: 2rpx dotted #e1e1e1;line-height: 48rpx;}
+.hospital:last-child{border: none;}
+.hospital .distance{color: #ff6064;font-size: 28rpx;}
+.hospital .small{font-size: 26rpx;color: #999;}
+
+.content-package .preferential{margin-bottom: 24rpx;color: #999;font-size: 26rpx;}
+.content-package .preferential text{color: #ff6064;}

@@ -1,0 +1,108 @@
+<!--pages/orderDt/orderDt.wxml 订单详情-->
+<view class='container'>
+  <!--订单-->
+  <view class='content-orderDt'>
+    <!--服务详情-->
+    <view class='title'>就诊历史</view>
+    <view class='orderDt'>
+      <!--就诊历史情况-->
+      <view class='history'>
+        <view wx:for='{{show_data.er_uselog}}' class='section'>
+          <view class='item'>
+            <text class='text pull-left'>使用时间：</text>
+            <text class='time pull-right'>{{item.usetime}}</text>
+          </view>
+          <view class='item'>
+            <text class='text pull-left'>就诊情况：</text>
+            <text class='situation pull-right' data-status='{{item.status}}'>{{item.status == 0 ? '等待就诊' : '已就诊'}}</text>
+          </view>
+          <view class='item'>
+            <text class='text pull-left'>是否评价：</text>
+            <text class='evaluation pull-right' bindtap='evaluation' data-state='{{item.commentStatus}}' data-log_id='{{item.log_id}}'>{{item.commentStatus == 0 ? '去评论' : '查看评价'}} ></text>
+          </view>
+        </view>
+      </view>
+      <!--订单详情-->
+      <view class='detail'>
+        <view class='dtitle'>订单详情</view>
+        <view class='section'>
+          <view class='item'>
+            <text class='text pull-left'>付款方式：</text>
+            <text class='type pull-right'>{{show_data.type}}</text>
+          </view>
+          <view class='item'>
+            <text class='text pull-left'>购买服务：</text>
+            <navigator url='/pages/package/package' open-type='navigate' class='service pull-right'>{{show_data.package_type}}
+              <text>  ></text>
+            </navigator>
+          </view>
+        </view>
+        <view class='section'>
+          <view class='item'>
+            <text class='text pull-left'>创建时间：</text>
+            <text class='datetime pull-right'>{{show_data.addtime}}</text>
+          </view>
+          <view class='item'>
+            <text class='text pull-left'>订单号：</text>
+            <text class='ordernum pull-right'>No.{{show_data.order_sn}}</text>
+          </view>
+        </view>
+      </view>
+      <!--订单金额-->
+      <view class='amount'>
+        <view class='item'>
+          <text class='text'>支付金额：</text>
+          <view class='pull-right'>
+            <text class='price'>{{show_data.price_h}}</text>元</view>
+        </view>
+      </view>
+      <!--对订单有疑问？-->
+      <view class='doubt'>
+        <button open-type='contact' plain='true'>对订单有疑问？</button>
+      </view>
+    </view>
+  </view>
+  <!--是否评价弹出层-->
+  <view class="modal-box" hidden="{{flag}}">
+    <view class="modal-body">
+      <view>
+        <image bindtap='ModalHidden' src="/images/modal-close.png" class="modal-close"></image>
+      </view>
+      <view class="modal-content">
+        <view class='content-eval'>
+          <view wx:if='{{evalSate == 1}}'>
+            <form>
+              <view class='title'>就诊满意度评价</view>
+              <view class='scores'>
+                <image src="/images/{{eval_modal.score}}-star.png" class="score-star"></image>
+              </view>
+              <view class='describe'>
+                <textarea placeholder="请在此填写评价..." value='{{eval_modal.content}}' disabled='disabled' />
+              </view>
+            </form>
+          </view>
+          <view  wx:else>
+            <form>
+              <view class='title'>就诊满意度评价</view>
+              <view class='scores'>
+                <view class='stars'>
+                  <block wx:for="{{stars}}">
+                    <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ? selectedStar : normalStar}}">
+                      <view class="item" style="left: 0" data-key="{{item+1}}" bindtap="selectStar"></view>
+                    </image>
+                  </block>
+                </view>
+              </view>
+              <view class='describe'>
+                <textarea bindinput='bindTextArea' placeholder="请在此填写评价..." value='{{evalText}}' />
+              </view>
+              <view class='btn'>
+                <button class='eval-btn gradient' plain='true' bindtap='evalSubmit'>提交</button>
+              </view>
+            </form>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

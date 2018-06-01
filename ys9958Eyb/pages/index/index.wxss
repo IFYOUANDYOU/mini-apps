@@ -1,0 +1,17 @@
+/**index.wxss**/
+
+/*顶部广告图*/
+.index-ad .ad{height: 620rpx;}
+/*主页菜单*/
+.index-menus{position: relative;top: -158rpx;margin: 0 40rpx;background-color: #fff;padding: 26rpx 60rpx;box-shadow: 0 10rpx 16rpx rgba(0,0,0,0.1);}
+.index-menus .menu{padding: 24rpx 0;border-bottom: 2rpx dotted #ebebeb;}
+.index-menus .menu:last-child{border: none;}
+.index-menus .icon{width: 78rpx;height: 78rpx;margin-right: 30rpx;}
+.index-menus .text{font-size: 34rpx;line-height: 78rpx;}
+.index-menus .text text{color: #666;font-size: 30rpx;}
+/*个人中心*/
+.index-center,.index-feedback{margin: 0 40rpx;text-align: center;line-height: 88rpx;}
+.index-center navigator{background-color: #f0f0f0;color: #ff595f;font-size: 32rpx;}
+.index-feedback .contact{font-size: 30rpx;color: #999;border: none;border-radius: 0;margin: 12rpx 0;}
+
+.index-fix-bottom{position: fixed;bottom: 0;left: 0;width: 100%;}
